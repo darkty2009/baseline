@@ -52,7 +52,7 @@ test("Math Unit Test", function() {
 
     _(Math.fround(0), 0);
     _(Math.fround(1), 1);
-    _(floorCompare(Math.fround(1.337), 1.3370000123977661), true);
+    _(floorCompare(Math.fround(1.337), 1.3369998931884766), true);
     _(floorCompare(Math.fround(1.5), 1.5), true);
     _(Math.fround(NaN), NaN);
 
