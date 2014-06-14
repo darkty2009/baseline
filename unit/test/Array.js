@@ -313,8 +313,6 @@ test("Array Unit Test", function() {
 	_([0, 4, 5, 6, 2, 3], splice1, 'splice final'); 
   
 	//	"_.prototype.toLocaleString",
-	_(['一', '二', '三'].toLocaleString(), '一,二,三', 'toLocaleString normal');
-	
 	//	"_.prototype.toString",
 	_(['一', '二', '三'].toString(), '一,二,三', 'toString normal');
 	

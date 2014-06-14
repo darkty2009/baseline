@@ -38,21 +38,6 @@ test("Array", function() {
 	}
 });
 
-test("ArrayBuffer", function() {
-	var _ = ArrayBuffer;
-	
-	var test = [
-		"$.byteLength",
-		"_.prototype.slice"
-	];
-	
-	ok(_, "Array");
-	var $ = new ArrayBuffer(32);
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+", test[i])");
-	}
-});
-
 test("Boolean", function() {
 	var _ = Boolean;
 	
@@ -341,9 +326,9 @@ test("Iterator()", function() {
 	ok(Iterator({}).next, "next");
 	
 	var ite = Iterator(["q", "w", {}]);
-	ok(ite.next().value[1] == 'q', "next.value");
-	ok(ite.next().done == false, "next.done");
-	ok(ite.next().done == true, "next over");
+	ok(ite.next(), [0, 'q'], "next.value");
+	ok(ite.next(), [1, 'w'], "next.done");
+	ok(ite.next(), [2], {}, "next over");
 });
 
 test("JSON", function() {
@@ -626,7 +611,6 @@ test("String", function() {
 		'_.prototype.codePointAt',
 		'_.prototype.contains',
 		'_.prototype.endsWith',
-		'_.prototype.normalize',
 		'_.prototype.repeat',
 		'_.prototype.startsWith',
 		'_.prototype.trimLeft',
