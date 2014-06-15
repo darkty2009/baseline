@@ -373,7 +373,7 @@
             return Math.exp(x) - 1;
 		},
 		fround:(function() {
-			if(typeof window.Float32Arary != 'undefined') {
+			if(typeof window.Float32Array != 'undefined') {
 				return function(x) {
 	            	var f32 = new Float32Array(1);
 	            	return f32[0] = x, f32[0];
@@ -383,7 +383,8 @@
 	        		var byteArray = [];
 	        		var byteString = x.toString(2);
 	        		var sign = x < 0 ? 1 : 0;
-	        		var exp = Math.max(byteString.indexOf('.') - 1, 0);
+	        		var pointIndex = byteString.indexOf('.');
+	        		var exp = byteString.charAt(0) == '0' ? Math.max(byteString.indexOf('1', pointIndex) - pointIndex, 0) : 0;
 	        		var sigma = 0;
 	        		for(var i=Math.max(byteString.indexOf('1'), 0);i<byteString.length && byteArray.length<23;i++) {
 	        			var ch = byteString.charAt(i);
@@ -394,7 +395,7 @@
 	        		for(var i=1;i<byteArray.length;i++) {
 	        			sigma += byteArray[i] * Math.pow(2, -1 * i);
 	        		}
-	        		return Math.pow(-1, sign) * (byteArray[0] * 1 + sigma) * Math.pow(2, exp);
+	        		return Math.pow(-1, sign) * (byteArray[0] * 1 + sigma) * Math.pow(2, -1 * exp);
 	        	};
 	        }
 		})(),
@@ -830,7 +831,7 @@
             };
             this.chain = this.then;
 
-            this.catch = function(reject) {
+            this['catch'] = function(reject) {
                 return this.then(undefined, reject);
             };
         };

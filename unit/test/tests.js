@@ -52,35 +52,6 @@ test("Boolean", function() {
 	}
 });
 
-test("DataView", function() {
-	var _ = DataView;
-	
-	var test = [
-		'$.getInt8',
-		'$.getUint8',
-		'$.getInt16',
-		'$.getUint16',
-		'$.getInt32',
-		'$.getUint32',
-		'$.getFloat32',
-		'$.getFloat64',
-		'$.setInt8',
-		'$.setUint8',
-		'$.setInt16',
-		'$.setUint16',
-		'$.setInt32',
-		'$.setUint32',
-		'$.setFloat32',
-		'$.setFloat64'
-	];
-	
-	ok(_, "DataView");
-	var $ = new DataView(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+", test[i])");
-	}
-});
-
 test("Date", function() {
 	var _ = Date;
 	
@@ -195,44 +166,6 @@ test("EvalError", function() {
 	}
 });
 
-test("Float32Array", function() {
-	var _ = Float32Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Float32Array");
-	var $ = new Float32Array(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
-});
-
-test("Float64Array", function() {
-	var _ = Float64Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Float64Array");
-	var $ = new Float64Array(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
-});
-
 test("Function", function() {
 	var _ = Function;
 	
@@ -254,63 +187,6 @@ test("Function", function() {
 
 test("Infinity", function() {
 	ok(Infinity, 'Infinity');
-});
-
-test("Int16Array", function() {
-	var _ = Int16Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Int16Array");
-	var $ = new Int16Array(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
-});
-
-test("Int32Array", function() {
-	var _ = Int32Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Int32Array");
-	var $ = new Int32Array(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
-});
-
-test("Int8Array", function() {
-	var _ = Int8Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Int8Array");
-	var $ = new Int8Array(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
 });
 
 test("isFinite()", function() {
@@ -649,63 +525,6 @@ test("TypeError", function() {
 	];
 	
 	ok(_, "TypeError");
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
-});
-
-test("Uint16Array", function() {
-	var _ = Uint16Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Uint16Array");
-	var $ = new Uint16Array(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
-});
-
-test("Uint32Array", function() {
-	var _ = Uint32Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Uint32Array");
-	var $ = new Uint32Array(new ArrayBuffer());
-	for(var i=0;i<test.length;i++) {
-		eval("ok("+test[i]+" != undefined, test[i])");
-	}
-});
-
-test("Uint8Array", function() {
-	var _ = Uint8Array;
-	
-	var test = [
-		'$.set',
-		'$.subarray',
-		'$.buffer',
-		'$.byteOffset',
-		'$.length',
-		'_.BYTES_PER_ELEMENT'
-	];
-	
-	ok(_, "Uint8Array");
-	var $ = new Uint8Array(new ArrayBuffer());
 	for(var i=0;i<test.length;i++) {
 		eval("ok("+test[i]+" != undefined, test[i])");
 	}

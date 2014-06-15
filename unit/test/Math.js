@@ -50,9 +50,15 @@ test("Math Unit Test", function() {
     _(Math.acosh(1), 0);
     _(floorCompare(Math.acosh(2), 1.3169578969248166), true);
 
-    _(Math.fround(0), 0);
-    _(Math.fround(1), 1);
-    _(floorCompare(Math.fround(1.337), 1.3369998931884766), true);
+    _(Math.fround(0), 0, 'Math.fround(0)');
+    _(Math.fround(1), 1, 'Math.fround(1)');
+    var fround0117 = Math.fround(0.117);
+    _(floorCompare(fround0117, 0.11699999868869781), true, 'Math.fround(0.117)');
+    var fround1337 = Math.fround(1.337);
+    if(typeof window.Float32Array != 'undefined')
+    	_(floorCompare(fround1337, 1.3370000123977661), true, 'Math.fround(1.337) Float32Array');
+    else
+    	_(floorCompare(fround1337, 1.3369998931884765), true, 'Math.fround(1.337) polyfill');
     _(floorCompare(Math.fround(1.5), 1.5), true);
     _(Math.fround(NaN), NaN);
 
