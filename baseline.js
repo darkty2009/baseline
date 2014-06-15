@@ -543,21 +543,25 @@
                 };
 
             // key is writable
-            if(delete this[key] && Object.defineProperty) {
+            if(delete this[key] && Object.defineProperty && '\v'!='v') {
                 Object.defineProperty(this, key, {
                     get: getter,
                     set: setter,
                     enumerable: true,
                     configurable: true
                 });
+                return true;
             }
+            return false;
 		},
 		unwatch:function(key) {
-			if(Object.defineProperty) {
+			if(Object.defineProperty && '\v'!='v') {
                 var val = this[key];
                 delete this[key];
                 this[key] = val;
+                return true;
             }
+            return false;
 		}
 	}, Object.prototype);
 	
@@ -584,9 +588,9 @@
 				if (o === null) {
 					throw Error('Cannot set a null [[Prototype]]');
 				}
-				if ( typeof o != 'object') {
-					throw TypeError('Argument must be an object');
-				}
+				// if ( typeof o != 'object') {
+					// throw TypeError('Argument must be an object');
+				// }
 				F.prototype = o;
 				return new F();
 			};
