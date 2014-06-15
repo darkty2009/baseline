@@ -4,7 +4,9 @@ test("Array", function() {
 	var test = [
 		"_.isArray",
 		"_.of",
+		// "_.from",
 		"_.prototype.concat",
+		"_.prototype.copyWithin",
 		"_.prototype.every",
 		"_.prototype.filter",
 		"_.prototype.forEach",

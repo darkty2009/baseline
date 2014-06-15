@@ -23,6 +23,12 @@ test("Array Unit Test", function() {
 	_([1, 2, 3].concat(4), [1, 2, 3, 4], 'concat with an non-Array element');
 	_([1, 2, 3].concat({0:4, 1:5, 2:6}), [1, 2, 3, {0:4, 1:5, 2:6}], 'concat with an indexed Object');
 	
+	//	"_.prototype.copyWithin"
+	_([1, 2, 3, 4, 5].copyWithin(0, 3), [4, 5, 3, 4, 5]);
+	_([1, 2, 3, 4, 5].copyWithin(0, 3, 4), [4, 2, 3, 4, 5]);
+	_([1, 2, 3, 4, 5].copyWithin(0, -2, -1), [4, 2, 3, 4, 5]);
+	_([].copyWithin.call({length: 5, 3: 1}, 0, 3), {0: 1, 3: 1, length: 5});
+	
 	//	"_.prototype.every",
 	var every1 = [1, 2, 3].every(function(val, index, arr) {
 		return val > 0;

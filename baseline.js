@@ -94,6 +94,66 @@
 				};
 			};
 			return ite;
+		},
+		forEach:function(callback, thisArgs) {
+			var t, k;
+			if(this == null) {
+				throw new TypeError('this is null or undefined');
+			}
+			var o = Object(this);
+			var len = o.length >>> 0;
+			if(typeof callback != 'function') {
+				throw new TypeError('callback is not a function');
+			}
+			if(thisArgs)
+				t = thisArgs;
+			k = 0;
+			while(k < len) {
+				var kValue;
+				if(k in o) {
+					kValue = o[k];
+					callback.call(t, kValue, k, o);
+				}
+				k++;
+			}
+		},
+		copyWithin:function(target, start) {
+			var O = Object(this);
+			var len = parseInt(O.length);
+			var relativeTarget = parseInt(target);
+			var to = relativeTarget < 0 ? Math.max(len + relativeTarget, 0) : Math.min(relativeTarget, len);
+			var relativeStart = parseInt(start);
+			var from = relativeStart < 0 ? Math.max(len + relativeStart, 0) : Math.min(relativeStart, len);
+			var end = arguments[2];
+			var relativeEnd = end === undefined ? len : parseInt(end);
+			var final = relativeEnd < 0 ? Math.max(len + relativeEnd, 0) : Math.min(relativeEnd, len);
+			var count = Math.min(final - from, len - to);
+
+			if (from < to && to < (from + count)) {
+				from = from + count - 1;
+				to = to + count - 1;
+				while (count > 0) {
+					if ( from in O)
+						O[to] = O[from];
+					else
+						delete O[to];
+					from--;
+					to--;
+					count--;
+				}
+			} else {
+				while (count > 0) {
+					if ( from in O)
+						O[to] = O[from];
+					else
+						delete O[to];
+
+					from++;
+					to++;
+					count--;
+				}
+			}
+			return O;
 		}
 	}, Array.prototype);
 
