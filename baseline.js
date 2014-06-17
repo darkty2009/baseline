@@ -3,93 +3,9 @@
  */
 (function(win) {
 	window.bs_patch = (function() {
-        var defineProperty = Object.defineProperty;
-        var orignalDefine = (!!defineProperty && '\v' != 'v');
-        var defineProperties = Object.defineProperties;
-        try {
-            defineProperty({}, '_', {value:'test'});
-        }catch(e) {
-            if ('__defineGetter__' in {}) {
-                defineProperty = function(obj, prop, desc) {
-                    if ('get' in desc) {
-                        obj.__defineGetter__(prop, desc.get);
-                    }
-                    if ('set' in desc) {
-                        obj.__defineSetter__(prop, desc.set);
-                    }
-                }
-                defineProperties = function(obj, props) {
-                    for (var prop in props) {
-                        defineProperty(obj, prop, props[prop]);
-                    }
-                    return obj;
-                }
-            }
-            else if(!defineProperties && window.VBArray) {
-                window.execScript([
-                    'Function vb_global_eval(code)',
-                    '\tExecuteGlobal(code)',
-                    'End Function'
-                ].join('\n'), 'VBScript');
+        window.hasOwnProperty = window.hasOwnProperty || Object.prototype.hasOwnProperty;
 
-                defineProperties = function(obj, props) {
-                    var className = 'VBClass' + setTimeout('1');
-                    var buffer = [];
-                    buffer.push(
-                            'Class ' + className,
-                        '\tPrivate [__data__], [__proxy__]',
-                        '\tPublic Default Function [__const__](d, p)',
-                        '\t\tSet [__data__] = d: set [__proxy__] = p',
-                        '\t\tSet [__const__] = Me',
-                        '\tEnd Function');
-                    for (var name in props) {
-                        buffer.push(
-                                '\tPublic Property Let [' + name + '](val)',
-                                '\t\tCall [__proxy__]([__data__], "' + name + '", val)',
-                            '\tEnd Property',
-                                '\tPublic Property Set [' + name + '](val)',
-                                '\t\tCall [__proxy__]([__data__], "' + name + '", val)',
-                            '\tEnd Property',
-                                '\tPublic Property Get [' + name + ']',
-                            '\tOn Error Resume Next',
-                                '\t\tSet[' + name + '] = [__proxy__]([__data__],"' + name + '")',
-                            '\tIf Err.Number <> 0 Then',
-                                '\t\t[' + name + '] = [__proxy__]([__data__],"' + name + '")',
-                            '\tEnd If',
-                            '\tOn Error Goto 0',
-                            '\tEnd Property')
-                    };
-                    buffer.push('End Class');
-                    buffer.push(
-                            'Function ' + className + 'Factory(a, b)',
-                        '\tDim o',
-                            '\tSet o = (New ' + className + ')(a, b)',
-                            '\tSet ' + className + 'Factory = o',
-                        'End Function');
-                    window.vb_global_eval(buffer.join('\r\n'));
-
-                    var resultObj = window[className + 'Factory'](props, function(props,name,value){
-                        var fn = props[name];
-                        if (arguments.length === 3) {
-                            fn.set(value)
-                        } else {
-                            return fn.get()
-                        }
-                    });
-                    return resultObj;
-                }
-                defineProperty = function(obj, key, prop) {
-                    var props = {};
-                    props[key] = prop;
-                    return defineProperties(obj, props);
-                };
-            }
-        }
-
-        Object.defineProperty = defineProperty;
-        Object.defineProperties = defineProperties;
-
-		if(orignalDefine) {
+		if(Object.defineProperty && '\v' != 'v') {
 			return function(impl, obj, method) {
                 if(method && typeof obj[method] == "undefined") {
                     Object.defineProperty(obj, method, {
@@ -119,14 +35,34 @@
 	}
 	var patches = window.bs_patches;
 	
-	patch(function() {
-		return Array.prototype.slice.call(arguments);
-	}, Array, "of");
+	patches({
+        'of':function() {
+            return Array.prototype.slice.call(arguments);
+        },
+        isArray:function(arg) {
+            return Object.prototype.toString.call(arg) === '[object Array]';
+        }
+    }, Array);
 	
 	patches({
 		entries:function() {
 			return Iterator(this);
 		},
+        every:function(fun) {
+            'use strict';
+            if (this === void 0 || this === null)
+                throw new TypeError();
+            var t = Object(this);
+            var len = t.length >>> 0;
+            if (typeof fun !== 'function')
+                throw new TypeError();
+            var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+            for (var i = 0; i < len; i++) {
+                if (i in t && !fun.call(thisArg, t[i], i, t))
+                    return false;
+            }
+            return true;
+        },
 		fill:function(value) {
 		    var O = Object(this);
 		    var len = parseInt(O.length);
@@ -141,6 +77,25 @@
 		    }
 		    return O;
 		},
+        filter:function(fun) {
+            "use strict";
+            if (this === void 0 || this === null)
+                throw new TypeError();
+            var t = Object(this);
+            var len = t.length >>> 0;
+            if (typeof fun !== "function")
+                throw new TypeError();
+            var res = [];
+            var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+            for (var i = 0; i < len; i++) {
+                if (i in t) {
+                    var val = t[i];
+                    if (fun.call(thisArg, val, i, t))
+                        res.push(val);
+                }
+            }
+            return res;
+        },
 		find:function(filter, context) {
 			var index = this.findIndex(filter, context);
 			if(index >= 0) {
@@ -239,7 +194,147 @@
 				}
 			}
 			return O;
-		}
+		},
+        indexOf: function (searchElement, fromIndex) {
+            if (this === undefined || this === null) {
+                throw new TypeError('"this" is null or not defined');
+            }
+            var length = this.length >>> 0;
+            fromIndex = +fromIndex || 0;
+            if (Math.abs(fromIndex) === Infinity) {
+                fromIndex = 0;
+            }
+            if (fromIndex < 0) {
+                fromIndex += length;
+                if (fromIndex < 0) {
+                    fromIndex = 0;
+                }
+            }
+            for (; fromIndex < length; fromIndex++) {
+                if (this[fromIndex] === searchElement && fromIndex in this) {
+                    return fromIndex;
+                }
+            }
+            return -1;
+        },
+        lastIndexOf: function(searchElement) {
+            'use strict';
+            if (this === void 0 || this === null) {
+                throw new TypeError();
+            }
+            var n, k,
+                t = Object(this),
+                len = t.length >>> 0;
+            if (len === 0) {
+                return -1;
+            }
+            n = len - 1;
+            if (arguments.length > 1) {
+                n = Number(arguments[1]);
+                if (n != n) {
+                    n = 0;
+                }
+                else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+                    n = (n > 0 || -1) * Math.floor(Math.abs(n));
+                }
+            }
+            for (k = n >= 0 ? Math.min(n, len - 1) : len - Math.abs(n); k >= 0; k--) {
+                if (k in t && t[k] === searchElement) {
+                    return k;
+                }
+            }
+            return -1;
+        },
+        map:function(callback, thisArg) {
+            var T, A, k;
+            if (this == null) {
+                throw new TypeError(" this is null or not defined");
+            }
+            var O = Object(this);
+            var len = O.length >>> 0;
+            if (typeof callback !== "function") {
+                throw new TypeError(callback + " is not a function");
+            }
+            if (thisArg) {
+                T = thisArg;
+            }
+            A = new Array(len);
+            k = 0;
+            while (k < len) {
+                var kValue, mappedValue;
+                if (k in O) {
+                    var Pk = k.toString();
+                    kValue = O[Pk];
+                    mappedValue = callback.call(T, kValue, k, O);
+                    A[Pk] = mappedValue;
+                }
+                k++;
+            }
+            return A;
+        },
+        reduce:function(callback) {
+            'use strict';
+            if (null === this || 'undefined' === typeof this) {
+                throw new TypeError('Array.prototype.reduce called on null or undefined');
+            }
+            if ('function' !== typeof callback) {
+                throw new TypeError(callback + ' is not a function');
+            }
+            var t = Object(this), len = t.length >>> 0, k = 0, value;
+            if (arguments.length >= 2) {
+                value = arguments[1];
+            } else {
+                while (k < len && !k in t) k++;
+                if (k >= len)
+                    throw new TypeError('Reduce of empty array with no initial value');
+                value = t[ k++ ];
+            }
+            for (; k < len; k++) {
+                if (k in t) {
+                    value = callback(value, t[k], k, t);
+                }
+            }
+            return value;
+        },
+        reduceRight:function(callback) {
+            'use strict';
+            if (null === this || 'undefined' === typeof this) {
+                throw new TypeError('Array.prototype.reduce called on null or undefined');
+            }
+            if ('function' !== typeof callback) {
+                throw new TypeError(callback + ' is not a function');
+            }
+            var t = Object(this), len = t.length >>> 0, k = len - 1, value;
+            if (arguments.length >= 2) {
+                value = arguments[1];
+            } else {
+                while (k >= 0 && !k in t) k--;
+                if (k < 0)
+                    throw new TypeError('Reduce of empty array with no initial value');
+                value = t[ k-- ];
+            }
+            for (; k >= 0; k--) {
+                if (k in t) {
+                    value = callback(value, t[k], k, t);
+                }
+            }
+            return value;
+        },
+        some:function(fun) {
+            'use strict';
+            if (this === void 0 || this === null)
+                throw new TypeError();
+            var t = Object(this);
+            var len = t.length >>> 0;
+            if (typeof fun !== 'function')
+                throw new TypeError();
+            var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+            for (var i = 0; i < len; i++) {
+                if (i in t && fun.call(thisArg, t[i], i, t))
+                    return true;
+            }
+            return false;
+        }
 	}, Array.prototype);
 
     // Date
@@ -272,6 +367,27 @@
             };
         })()
     }, Date);
+
+    patches({
+        toISOString:(function() {
+            function pad(number) {
+                if ( number < 10 ) {
+                    return '0' + number;
+                }
+                return number;
+            }
+            return function() {
+                return this.getUTCFullYear() +
+                    '-' + pad(this.getUTCMonth() + 1) +
+                    '-' + pad(this.getUTCDate()) +
+                    'T' + pad(this.getUTCHours()) +
+                    ':' + pad(this.getUTCMinutes()) +
+                    ':' + pad(this.getUTCSeconds()) +
+                    '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
+                    'Z';
+            };
+        })()
+    }, Date.prototype)
 
     // Function
     patch(function(oThis) {
@@ -411,87 +527,87 @@
             this.size = 0;
 		};
 
-        patches({
-            'delete':function(key) {
-                var index = this.__source__findIndex(function(item) {
-                   return item[0] === key;
-                });
-                if(index >= 0) {
-                    this.__source__.splice(index, 1);
-                }
-                this.size = this.__source__.length;
-                return this;
-            },
-            clear:function() {
-                this.__source__ = [];
-                this.size = 0;
-                return this;
-            },
-            entries:function() {
-                return Iterator(this);
-            },
-            forEach:function(func, argv) {
-                this.__source__.forEach(func, argv);
-                return this;
-            },
-            get:function(key) {
-                var index = this.__source__.findIndex(function(item) {
-                    return item[0] === key;
-                });
-                return index>=0 ? this.__source__[index][1] : undefined;
-            },
-            has:function(key) {
-                return this.__source__.findIndex(function(item) {
-                    return item[0] === key;
-                }) >= 0;
-            },
-            keys:function() {
-                var ite = Iterator(this);
-                ite.current = 0;
-                ite.next = function _iterator_() {
-                    var value = this.iterator[this.current++];
-                    if(this.current > this.length) {
-                        throw new Error("stop iterate");
-                    }
-                    return {
-                        value:value[0],
-                        done:this.current >= this.length
-                    };
-                };
-                return ite;
-            },
-            set:function(key, value) {
-                var pair = [key, value];
-                var index = this.__source__.findIndex(function(item) {
-                    return item[0] === key;
-                });
-                if(index >= 0) {
-                    this.__source__[index] = pair;
-                }else {
-                    this.__source__.push(pair);
-                }
-                this.size = this.__source__.length;
-                return this;
-            },
-            values:function() {
-                var ite = Iterator(this);
-                ite.current = 0;
-                ite.next = function _iterator_() {
-                    var value = this.iterator[this.current++];
-                    if(this.current > this.length) {
-                        throw new Error("stop iterate");
-                    }
-                    return {
-                        value:value[1],
-                        done:this.current >= this.length
-                    };
-                };
-                return ite;
-            }
-        }, _Map.prototype);
-
 		return _Map;
 	})(), window, "Map");
+
+    patches({
+        'delete':function(key) {
+            var index = this.__source__findIndex(function(item) {
+                return item[0] === key;
+            });
+            if(index >= 0) {
+                this.__source__.splice(index, 1);
+            }
+            this.size = this.__source__.length;
+            return this;
+        },
+        clear:function() {
+            this.__source__ = [];
+            this.size = 0;
+            return this;
+        },
+        entries:function() {
+            return Iterator(this);
+        },
+        forEach:function(func, argv) {
+            this.__source__.forEach(func, argv);
+            return this;
+        },
+        get:function(key) {
+            var index = this.__source__.findIndex(function(item) {
+                return item[0] === key;
+            });
+            return index>=0 ? this.__source__[index][1] : undefined;
+        },
+        has:function(key) {
+            return this.__source__.findIndex(function(item) {
+                return item[0] === key;
+            }) >= 0;
+        },
+        keys:function() {
+            var ite = Iterator(this);
+            ite.current = 0;
+            ite.next = function _iterator_() {
+                var value = this.iterator[this.current++];
+                if(this.current > this.length) {
+                    throw new Error("stop iterate");
+                }
+                return {
+                    value:value[0],
+                    done:this.current >= this.length
+                };
+            };
+            return ite;
+        },
+        set:function(key, value) {
+            var pair = [key, value];
+            var index = this.__source__.findIndex(function(item) {
+                return item[0] === key;
+            });
+            if(index >= 0) {
+                this.__source__[index] = pair;
+            }else {
+                this.__source__.push(pair);
+            }
+            this.size = this.__source__.length;
+            return this;
+        },
+        values:function() {
+            var ite = Iterator(this);
+            ite.current = 0;
+            ite.next = function _iterator_() {
+                var value = this.iterator[this.current++];
+                if(this.current > this.length) {
+                    throw new Error("stop iterate");
+                }
+                return {
+                    value:value[1],
+                    done:this.current >= this.length
+                };
+            };
+            return ite;
+        }
+    }, Map.prototype);
 	
 	patches({
 		acosh:function(x) {
@@ -624,15 +740,9 @@
                     getter = function() {
                         return newVal;
                     },
-                    setter = function(val, second) {
-                        if(val === newVal)
-                            return newVal;
+                    setter = function(val) {
                         oldval = newVal;
                         newVal = handler.call(_this, key, oldVal, val);
-
-                        if('\v' == 'v')
-                            _this[key] = newVal;
-
                         return newVal;
                     };
 
@@ -688,7 +798,27 @@
 				F.prototype = o;
 				return new F();
 			};
-		})()
+		})(),
+        getOwnPropertyNames:function(instance) {
+            var result = [];
+            for(var key in instance) {
+                if(instance.hasOwnProperty(key)) {
+                    result.push(key);
+                }
+            }
+            return result;
+        },
+        getPrototypeOf:(function() {
+            if(typeof "test".__proto__ == 'object') {
+                return function(instance) {
+                    return instance.__proto__;
+                };
+            }else {
+                return function(instance) {
+                    return instance.constructor.prototype;
+                };
+            }
+        })()
 	}, Object);
 	
 	patch((function() {

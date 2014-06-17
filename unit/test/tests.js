@@ -170,15 +170,15 @@ test("EvalError", function() {
 
 test("Function", function() {
 	var _ = Function;
-	
+
+    var $ = function() {};
 	var test = [
-		'_.arguments',
 		'_.length',
 		'_.prototype.apply',
 		'_.prototype.bind',
 		'_.prototype.call',
 		'_.prototype.toString',
-		'_.caller'
+		'$.caller'
 	];
 	
 	ok(_, "Function");
@@ -225,10 +225,10 @@ test("JSON", function() {
 
 test("Map", function() {
 	var _ = Map;
-	
+
 	var test = [
 		'_.prototype.clear',
-		'_.prototype.delete',
+		'_.prototype["delete"]',
 		'_.prototype.entries',
 		'_.prototype.forEach',
 		'_.prototype.get',
@@ -334,24 +334,24 @@ test("Object", function() {
 	
 	var test = [
 		"_.create",
-		"_.defineProperties",
+//		"_.defineProperties",
 		"_.defineProperty",
-		"_.freeze",
+//		"_.freeze",
 		"_.getOwnPropertyDescriptor",
 		"_.getOwnPropertyNames",
 		"_.getPrototypeOf",
-		"_.isExtensible",
-		"_.isFrozen",
-		"_.isSealed",
+//		"_.isExtensible",
+//		"_.isFrozen",
+//		"_.isSealed",
 		"_.keys",
-		"_.preventExtensions",
+//		"_.preventExtensions",
 		"_.hasOwnProperty",
 		"_.isPrototypeOf",
 		"_.propertyIsEnumerable",
 		"_.toLocaleString",
 		"_.toString",
 		"_.valueOf",
-		"_.seal",
+//		"_.seal",
 		"_.is",
 		"_.setPrototypeOf",
 		"_.prototype.watch",
@@ -433,7 +433,7 @@ test("Set", function() {
 	var test = [
 		"_.prototype.add",
 		"_.prototype.clear",
-		"_.prototype.delete",
+		"_.prototype['delete']",
 		"_.prototype.entries",
 		"_.prototype.forEach",
 		"_.prototype.has",
@@ -556,7 +556,7 @@ test("Promise", function() {
 	
 	var test = [
 		"$.then",
-		"$.catch",
+		"$['catch']",
 		"_.resolve",
 		"_.reject",
 		"_.all",
