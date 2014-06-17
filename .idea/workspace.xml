@@ -23,31 +23,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="baseline.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="baseline.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/baseline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8103447" vertical-offset="15725" max-vertical-offset="24800">
-              <caret line="806" column="17" selection-start-line="806" selection-start-column="17" selection-end-line="806" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.33939394" vertical-offset="0" max-vertical-offset="25340">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Object.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unit/test/Object.js">
+      <file leaf-file-name="Array.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit/test/Array.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1820">
-              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+            <state vertical-scroll-proportion="-4.465517" vertical-offset="2241" max-vertical-offset="7380">
+              <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tests.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit/test/tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.522673" vertical-offset="6502" max-vertical-offset="11540">
-              <caret line="347" column="27" selection-start-line="347" selection-start-column="27" selection-end-line="347" selection-end-column="27" />
+            <state vertical-scroll-proportion="-8.586206" vertical-offset="6502" max-vertical-offset="11540">
+              <caret line="350" column="27" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -78,8 +78,8 @@
       <list>
         <option value="$PROJECT_DIR$/unit/test/Object.js" />
         <option value="$PROJECT_DIR$/unit/test/Array.js" />
-        <option value="$PROJECT_DIR$/baseline.js" />
         <option value="$PROJECT_DIR$/unit/test/tests.js" />
+        <option value="$PROJECT_DIR$/baseline.js" />
       </list>
     </option>
   </component>
@@ -273,14 +273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit/test/Array.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3965517" vertical-offset="3501" max-vertical-offset="7380">
-          <caret line="171" column="4" selection-start-line="171" selection-start-column="4" selection-end-line="171" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit/test/Function.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
@@ -297,14 +289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/baseline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8103447" vertical-offset="15725" max-vertical-offset="24800">
-          <caret line="806" column="17" selection-start-line="806" selection-start-column="17" selection-end-line="806" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit/test/Object.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1820">
@@ -313,10 +297,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unit/test/Array.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.465517" vertical-offset="2241" max-vertical-offset="7380">
+          <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/unit/test/tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.522673" vertical-offset="6502" max-vertical-offset="11540">
-          <caret line="347" column="27" selection-start-line="347" selection-start-column="27" selection-end-line="347" selection-end-column="27" />
+        <state vertical-scroll-proportion="-8.586206" vertical-offset="6502" max-vertical-offset="11540">
+          <caret line="350" column="27" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33939394" vertical-offset="0" max-vertical-offset="25340">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding />
         </state>
       </provider>

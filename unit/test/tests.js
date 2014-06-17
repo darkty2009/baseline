@@ -335,9 +335,9 @@ test("Object", function() {
 	var test = [
 		"_.create",
 //		"_.defineProperties",
-		"_.defineProperty",
+//		"_.defineProperty",
 //		"_.freeze",
-		"_.getOwnPropertyDescriptor",
+//		"_.getOwnPropertyDescriptor",
 		"_.getOwnPropertyNames",
 		"_.getPrototypeOf",
 //		"_.isExtensible",

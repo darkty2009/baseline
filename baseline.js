@@ -2,12 +2,19 @@
  * JavaScript Baseline API
  */
 (function(win) {
+    var isIE=!!window.ActiveXObject;
+    var isIE6=isIE&&!window.XMLHttpRequest;
+    var isIE8=isIE&&!!document.documentMode;
+    var isIE7=isIE&&!isIE6&&!isIE8;
+    var isIE68 = isIE6 || isIE7 || isIE8;
+
 	window.bs_patch = (function() {
+        // IE8 window.hasOwnProperty
         window.hasOwnProperty = window.hasOwnProperty || Object.prototype.hasOwnProperty;
 
-		if(Object.defineProperty && '\v' != 'v') {
-			return function(impl, obj, method) {
-                if(method && typeof obj[method] == "undefined") {
+		if(Object.defineProperty && !isIE68) {
+			return function(impl, obj, method, condition) {
+                if((method && typeof obj[method] == "undefined") || condition) {
                     Object.defineProperty(obj, method, {
                         enumerable: false,
                         configurable: true,
@@ -17,8 +24,8 @@
                 }
 			};
 		}else {
-			return function(impl, obj, method) {
-				if(method && typeof obj[method] == "undefined") {
+			return function(impl, obj, method, condition) {
+				if((method && typeof obj[method] == "undefined") || condition) {
 					obj[method] = impl;
 				}
 			};
@@ -337,6 +344,23 @@
         }
 	}, Array.prototype);
 
+    patch((function() {
+        var unshift = Array.prototype.unshift;
+        return function() {
+            unshift.apply(this, arguments);
+            return this.length;
+        }
+    })(), Array.prototype, 'unshift', isIE68);
+
+    patch((function() {
+        var join = Array.prototype.join;
+        return function(spec) {
+            if(typeof spec == 'undefined')
+                spec = ',';
+            return join.apply(this, [spec]);
+        }
+    })(), Array.prototype, 'join', isIE68);
+
     // Date
     patches({
         now:function() {
@@ -386,8 +410,11 @@
                     '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
                     'Z';
             };
-        })()
-    }, Date.prototype)
+        })(),
+        toJSON:function() {
+            return this.toISOString();
+        }
+    }, Date.prototype);
 
     // Function
     patch(function(oThis) {
