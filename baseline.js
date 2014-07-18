@@ -1169,7 +1169,7 @@
 
         _Promise.deferred = function() {
             var result = [];
-            result.promise = new Promise(function(resolve, reject) {
+            result.promise = new _Promise(function(resolve, reject) {
                 result.resolve = resolve;
                 result.reject = reject;
             });
@@ -1177,13 +1177,13 @@
         };
 
         _Promise.resolve = _Promise.cast = function(value) {
-            return new Promise(function(resolve) {
+            return new _Promise(function(resolve) {
                 resolve(value)
             });
         };
         
         _Promise.reject = function(message) {
-        	return new Promise(function(resolve, reject) {
+        	return new _Promise(function(resolve, reject) {
         		reject(message);
         	});
         };
