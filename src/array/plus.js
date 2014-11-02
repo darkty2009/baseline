@@ -44,6 +44,12 @@
         },
         compact:function() {
 
+        },
+        first:function() {
+
+        },
+        last:function() {
+
         }
     }, Array.prototype);
 })();

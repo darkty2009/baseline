@@ -168,6 +168,9 @@
             }
             return str;
         },
+        unique:function(prefix) {
+
+        },
         step:function(from, to, func) {
             return from.step(to, func);
         }

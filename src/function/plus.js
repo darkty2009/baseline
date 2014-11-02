@@ -6,6 +6,18 @@
     // interval
     // defer
     patches({
+        memoize:function(hasher) {
+            var mem = {};
+            var _this = this;
+            hasher = hasher || function(obj) {
+                return obj;
+            };
+
+            return function() {
+                var key = hasher.apply(this, arguments);
+                return Object.prototype.hasOwnProperty.call(mem, key) ? mem[key] : (mem[key] = _this.apply(this, arguments));
+            };
+        },
         debounce:function(time) {
             var callback = this,cid;
             return function() {
@@ -46,6 +58,9 @@
         },
         defer:function() {
             return this.timeout(1);
+        },
+        singleton:function() {
+
         }
     }, Function.prototype);
 })();
