@@ -1,3 +1,15 @@
+(function(root, factory) {
+    if(typeof define === 'function' && define.amd) {
+        define(factory);
+    }
+    else if(typeof exports === 'object') {
+        module.exports = factory();
+    }
+    else {
+        root.returnExports = factory();
+    }
+})(this, function() {
+
 var isIE=!!window.ActiveXObject;
 var isIE6=isIE&&!window.XMLHttpRequest;
 var isIE8=isIE&&!!document.documentMode;
@@ -1265,3 +1277,5 @@ var patches = window.bs_patches;
         })()
     }, String);
 })();
+
+});
