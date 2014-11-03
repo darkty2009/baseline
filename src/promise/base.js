@@ -8,11 +8,11 @@
                     while (queue.length) {
                         var arr = queue.shift()
                         if (typeof arr[i] === 'function') {
-                            try {
+                            // try {
                                 var chain = arr[i](val)
-                            } catch (e) {
-                                return reject(e)
-                            }
+                            // } catch (e) {
+                            //     return reject(e)
+                            // }
                             if (chain && typeof chain.then === 'function') {
                                 return chain.then(resolve, reject)
                             } else {

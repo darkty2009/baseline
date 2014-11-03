@@ -3,7 +3,10 @@
     patches({
         now:function() {
             return new Date().getTime();
-        },
+        }
+    }, Date);
+
+    patches({
         parse:(function() {
             var REGEX_ISO_8601 = /^(\d{4}|\+\d{6})(?:-(\d{2})(?:-(\d{2})(?:T(\d{2}):(\d{2}):(\d{2})\.(\d{1,})(Z|([\-+])(\d{2}):(\d{2}))?)?)?)?$/;
             var superParse = Date.parse;
@@ -28,7 +31,7 @@
                 return superParse.apply(this, arguments);
             };
         })()
-    }, Date);
+    }, Date, 'parse', isIE);
 
     patches({
         toISOString:(function() {
