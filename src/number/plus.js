@@ -139,14 +139,6 @@
 
             return result;
         },
-        fill:function(len, prefix) {
-            prefix = prefix || '0';
-            var result = this.toString();
-            while(result.length < len) {
-                result = prefix + result;
-            }
-            return result;
-        },
         clearTimeout:function() {
             return clearTimeout(this);
         },
