@@ -762,7 +762,7 @@ patches({
     }
 }, Number);
 patches({
-    /*watch:(function() {
+    watch:(function() {
         return function(key, handler) {
             var _this = this;
             var oldVal = this[key], newVal = oldVal,
@@ -795,7 +795,7 @@ patches({
             this[key] = val;
         }
         return this;
-    },*/
+    }
 }, Object.prototype);
 
 patches({
