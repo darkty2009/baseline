@@ -33,6 +33,9 @@ patches({
         }
         return this;
     },*/
+}, Object.prototype);
+
+patches({
     seal:function(obj) {
         return obj;
     },
@@ -47,10 +50,7 @@ patches({
     },
     isFrozen:function(obj) {
         return false;
-    }
-}, Object.prototype);
-
-patches({
+    },
     setPrototypeOf:function(obj, proto) {
         obj.__proto__ = proto;
         return obj;
