@@ -50,20 +50,61 @@ patches({
         return v1 === v2;
     },
     create:(function() {
-        var F = function() {};
-        return function(o) {
-            if (arguments.length > 1) {
-                throw Error('Second argument not supported');
+        var createEmpty;
+        var hasProto = !({__proto__:null} instanceof Object);
+        if(hasProto || typeof document === 'undefined') {
+            createEmpty = function() {
+                return {'__proto__':null};
+            };
+        }else {
+            createEmpty = function() {
+                var iframe = document.createElement('iframe');
+                var parent = document.body || document.documentElement;
+                iframe.style.display = "none";
+                parent.appendChild(iframe);
+                iframe.src = "javascript:;";
+                var empty = iframe.contentWindow.Object.prototype;
+                parent.removeChild(iframe);
+                iframe = null;
+
+                delete empty.constructor;
+                delete empty.hasOwnProperty;
+                delete empty.proprtyIsEnumerable;
+                delete empty.isPrototypeOf;
+                delete empty.toLocaleString;
+                delete empty.toString;
+                delete empty.valueOf;
+                empty.__proto__ = null;
+
+                function Empty() {};
+                Empty.prototype = empty;
+
+                createEmpty = function() {
+                    return new Empty();
+                }
+                return new Empty();
+            };
+        }
+
+        return function(prototype, properties) {
+            var object;
+            function Type() {}
+            if(prototype === null) {
+                object = createEmpty();
+            }else {
+                if(typeof prototype !== 'object' && typeof prototype !== 'function') {
+                    throw new Error('prototype must be an Object');
+                }
+                Type.prototype = prototype;
+                object = new Type();
+                object.__proto__ = prototype;
             }
-            if (o === null) {
-                throw Error('Cannot set a null [[Prototype]]');
+
+            if(properties !== void 0) {
+                patches(properties, object);
             }
-            // if ( typeof o != 'object') {
-            // throw TypeError('Argument must be an object');
-            // }
-            F.prototype = o;
-            return new F();
-        };
+            return object;
+        }
     })(),
     getOwnPropertyNames:function(instance) {
         var result = [];
