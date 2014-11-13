@@ -32,6 +32,21 @@ patches({
             this[key] = val;
         }
         return this;
+    },
+    seal:function(obj) {
+        return obj;
+    },
+    freeze:function(obj) {
+        return obj;
+    },
+    preventExtensions:function(obj) {
+        return obj;
+    },
+    isSealed:function(obj) {
+        return false;
+    },
+    isFrozen:function(obj) {
+        return false;
     }
 }, Object.prototype);
 
