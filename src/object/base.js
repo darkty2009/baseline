@@ -1,41 +1,4 @@
 patches({
-    watch:(function() {
-        return function(key, handler) {
-            var _this = this;
-            var oldVal = this[key], newVal = oldVal,
-                getter = function() {
-                    return newVal;
-                },
-                setter = function(val) {
-                    oldval = newVal;
-                    newVal = handler.call(_this, key, oldVal, val);
-                    return newVal;
-                };
-
-            // key is writable
-            if(key in _this && delete _this[key] && Object.defineProperty) {
-                _this = Object.defineProperty(_this, key, {
-                    get: getter,
-                    set: setter,
-                    enumerable: true,
-                    configurable: true
-                });
-            }
-
-            return _this;
-        }
-    })(),
-    unwatch:function(key) {
-        if(Object.defineProperty) {
-            var val = this[key];
-            delete this[key];
-            this[key] = val;
-        }
-        return this;
-    }
-}, Object.prototype);
-
-patches({
     seal:function(obj) {
         return obj;
     },
