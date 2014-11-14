@@ -1052,6 +1052,10 @@ patch((function() {
 
     return _Promise;
 })(), window, 'Promise');
+
+patches({
+    defer:window.Promise.deferred
+}, window.Promise);
 patch((function() {
     var _Set = function() {
         this.__source__ = [];

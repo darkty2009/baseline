@@ -59,6 +59,11 @@ patches({
         return this.timeout(1);
     },
     singleton:function() {
+        if(typeof this.__initialize__ == 'undefined') {
+            var args = arguments || [];
+            this.__initialize__ = this.apply(null, args);
+        }
 
+        return this.__initialize__;
     }
 }, Function.prototype);
