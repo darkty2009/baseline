@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit/test/Object.js" afterPath="$PROJECT_DIR$/unit/test/Object.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/promise/base.js" afterPath="$PROJECT_DIR$/src/promise/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit/test/tests.js" afterPath="$PROJECT_DIR$/unit/test/tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/date/plus.js" afterPath="$PROJECT_DIR$/src/date/plus.js" />
     </list>
     <ignored path="baseline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +34,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/promise/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="33" selection-start="3488" selection-end="3488" vertical-scroll-proportion="0.90174675" vertical-offset="1657" max-vertical-offset="2175">
+            <state line="131" column="29" selection-start="3388" selection-end="3388" vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2175">
+              <folding>
+                <marker date="1415936232000" expanded="true" signature="3453:3490" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/array/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="26" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/date/base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="9" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plus.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/date/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="19" selection-start="777" selection-end="777" vertical-scroll-proportion="0.93449783" vertical-offset="487" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
@@ -85,6 +112,7 @@
         <option value="$PROJECT_DIR$/unit/test/Object.js" />
         <option value="$PROJECT_DIR$/unit/test/tests.js" />
         <option value="$PROJECT_DIR$/src/promise/base.js" />
+        <option value="$PROJECT_DIR$/src/date/plus.js" />
       </list>
     </option>
   </component>
@@ -569,11 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/date/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit/test/plus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="56" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
@@ -594,13 +617,6 @@
     <entry file="file://$PROJECT_DIR$/src/function/plus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="23" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/date/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="9" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.68139964" vertical-offset="245" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
@@ -647,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/array/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="2332" selection-end="2332" vertical-scroll-proportion="-9.423077" vertical-offset="1030" max-vertical-offset="1590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="9" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="990">
@@ -691,7 +700,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/promise/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="33" selection-start="3488" selection-end="3488" vertical-scroll-proportion="0.90174675" vertical-offset="1657" max-vertical-offset="2175">
+        <state line="131" column="29" selection-start="3388" selection-end="3388" vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2175">
+          <folding>
+            <marker date="1415936232000" expanded="true" signature="3453:3490" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/array/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="26" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/date/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="9" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/date/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="19" selection-start="777" selection-end="777" vertical-scroll-proportion="0.93449783" vertical-offset="487" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
