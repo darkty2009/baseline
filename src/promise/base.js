@@ -134,3 +134,7 @@ patch((function() {
 
     return _Promise;
 })(), window, 'Promise');
+
+patches({
+    defer:window.Promise.deferred
+}, window.Promise);

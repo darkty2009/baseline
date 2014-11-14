@@ -353,9 +353,7 @@ test("Object", function() {
 		"_.valueOf",
 //		"_.seal",
 		"_.is",
-		"_.setPrototypeOf",
-		"_.prototype.watch",
-		"_.prototype.unwatch"
+		"_.setPrototypeOf"
 	];
 	
 	ok(_, "Object");

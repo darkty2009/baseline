@@ -67,19 +67,4 @@ test("Object Unit Test", function() {
 	_(Object.is('0', 0), false); 
 	
 	// "_.setPrototypeOf",
-	
-    if('\v' != 'v') {
-        // "_.prototype.watch",
-        var watchObj = {'x': 2};
-        watchObj.watch('x', function (key, oldVal, newVal) {
-            return oldVal + newVal;
-        });
-        watchObj.x = 3;
-        _(watchObj.x, 5, 'watch normal');
-
-        // "_.prototype.unwatch"
-        watchObj.unwatch('x');
-        watchObj.x = 3;
-        _(watchObj.x, 3, 'unwatch');
-    }
 });
