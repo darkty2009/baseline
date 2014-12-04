@@ -1,0 +1,21 @@
+{
+    name:"baseline-js",
+    version:"1.0.1",
+    description:"polyfill to es5, and more function then es5-shim",
+    main:"build/baseline.js",
+    repository:{
+        type:"git",
+        url:"git://github.com/darkty2009/baseline"
+    },
+    keywords:[
+        "es5",
+        "polyfill",
+        "promise",
+        "date",
+        "string",
+        "number",
+        "function"
+    ],
+    author:"darkty2009",
+    license:"MIT"
+}
