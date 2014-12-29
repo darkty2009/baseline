@@ -1,21 +1,25 @@
 // Function
-patch(function(oThis) {
-    if (typeof this !== "function") {
-        throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
-    }
+(function(win) {
+    var patch = win.patch;
 
-    var aArgs = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP = function () {},
-        fBound = function () {
-            return fToBind.apply(this instanceof fNOP && oThis
-                ? this
-                : oThis,
-                aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
+    patch.one(function(oThis) {
+        if (typeof this !== "function") {
+            throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+        }
 
-    fNOP.prototype = this.prototype;
-    fBound.prototype = new fNOP();
+        var aArgs = Array.prototype.slice.call(arguments, 1),
+            fToBind = this,
+            fNOP = function () {},
+            fBound = function () {
+                return fToBind.apply(this instanceof fNOP && oThis
+                    ? this
+                    : oThis,
+                    aArgs.concat(Array.prototype.slice.call(arguments)));
+            };
 
-    return fBound;
-}, Function.prototype, 'bind');
+        fNOP.prototype = this.prototype;
+        fBound.prototype = new fNOP();
+
+        return fBound;
+    }, Function.prototype, 'bind');
+})(this);

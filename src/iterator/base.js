@@ -1,30 +1,34 @@
 // Iterator
-patch(function(argv) {
-    var _Iterator = function() {
-        this.length = 0;
-        this.current = 0;
+(function(win) {
+    var patch = win.patch;
 
-        this.source = arguments[0] || [];
-        this.iterator = [];
-        for(var key in this.source) {
-            if(this.source.hasOwnProperty(key))
-                this.iterator.push([key, this.source[key]]);
-        }
+    patch.one(function(argv) {
+        var _Iterator = function() {
+            this.length = 0;
+            this.current = 0;
 
-        this.length = this.iterator.length;
-
-        this.next = function() {
-            var value = this.iterator[this.current];
-            if(this.current >= this.length) {
-                throw new Error("stop iterate");
+            this.source = arguments[0] || [];
+            this.iterator = [];
+            for(var key in this.source) {
+                if(this.source.hasOwnProperty(key))
+                    this.iterator.push([key, this.source[key]]);
             }
-            return [this.current++, value];
-            // return {
-            // value:value,
-            // done:this.current >= this.length
-            // };
-        };
-    };
 
-    return new _Iterator(argv);
-}, window, "Iterator");
+            this.length = this.iterator.length;
+
+            this.next = function() {
+                var value = this.iterator[this.current];
+                if(this.current >= this.length) {
+                    throw new Error("stop iterate");
+                }
+                return [this.current++, value];
+                // return {
+                // value:value,
+                // done:this.current >= this.length
+                // };
+            };
+        };
+
+        return new _Iterator(argv);
+    }, win, "Iterator");
+})(this);

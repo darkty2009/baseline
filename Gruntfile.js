@@ -38,7 +38,7 @@ module.exports = function(grunt) {
             "        module.exports = factory();",
             "    }",
             "    else {",
-            "        root.returnExports = factory();",
+            "        root.baseline = factory();",
             "    }",
             "})(this, function() {",
             "",
