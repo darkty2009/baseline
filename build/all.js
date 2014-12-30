@@ -1338,328 +1338,334 @@
         })()
     }, String);
 })(this);
-patches({
-    unique:function() {
-        for(var i=0;i<this.length;i++) {
-            var it = this[i];
-            for(var j=this.length - 1;j>i;j--) {
-                if(this[j] == it) {
-                    this.splice(j, 1);
-                }
-            }
-        }
-        return this;
-    },
-    max:function() {
-        return this.reduce(function(prep, next) {
-            return prep > next ? prep : next;
-        });
-    },
-    min:function() {
-        return this.reduce(function(prep, next) {
-            return prep < next ? prep : next;
-        });
-    },
-    // a new array contain the key
-    pluck:function(key) {
-        var result = [];
-        this.forEach(function(item) {
-            if(item.hasOwnProperty(key)) {
-                result.push(item[key]);
-            }
-        });
-        return result;
-    },
-    group:function(key) {
-        var result = {};
-        this.pluck(key).forEach(function(item) {
-            if(item.hasOwnProperty(key)) {
-                if(!result.hasOwnProperty(item[key])) {
-                    result[item[key]] = [];
-                }
-                result[item[key]].push(item);
-            }
-        });
-        return result;
-    },
-    // all in a array
-    flatten:function() {
-        return this.reduce(function(prep, next) {
-            if(!prep.is("Array")) {
-                prep = [prep];
-            }
-            if(next.is("Array")) {
-                next = next.flatten();
-            }
-            return prep.concat(next);
-        });
-    },
-    contain:function(item) {
-        for(var i=0;i<this.length;i++) {
-            if(this[i] === item)
-                return true;
-        }
-        return false;
-    },
-    // random get the len data
-    sample:function(len) {
-        len = len * 1 || 1;
-        var data = [].concat(this),result = [];
-        len = len > data.length ? data.length : len;
-        while(len > 0) {
-            var rand = Number.random(0, data.length);
-            data.swap(rand, data.length - 1);
-            result.push(data.pop());
-        }
+(function(win) {
+    var patch = win.patch;
 
-        return result;
-    },
-    // random all data
-    shuffle:function() {
-        return this.sample(this.length);
-    },
-    eq:function(index) {
-        return this[index];
-    },
-    compact:function() {
-        return this.filter(function(item) {
-            return !!item;
-        });
-    },
-    swap:function(pos1, pos2) {
-        var temp = this[pos1];
-        this[pos1] = this[pos2];
-        this[pos2] = temp;
-        return this;
-    },
-    first:function() {
-        return this[0];
-    },
-    last:function() {
-        return this[this.length - 1 > -1 ? this.length - 1 : 0];
-    }
-}, Array.prototype);
-patches({
-    getDaysInMonth:function(year, month) {
-        return [31, (Date.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
-    },
-    compare:function(date1, date2) {
-        if(isNaN(date1) || isNaN(date2))
-            throw new TypeError(date1 + "-" + date2);
-
-        if(date1 instanceof Date && date2 instanceof Date) {
-            if(date1 < date2) {
-                return -1;
-            }
-            else if(date1 > date2) {
-                return 1;
-            }else {
-                return 0;
-            }
-        }else {
-            throw new TypeError(date1 + "-" + date2);
-        }
-    },
-    equal:function(date1, date2) {
-        return !(Date.compare(date1, date2));
-    },
-    today:function() {
-        return new Date().clearTime();
-    },
-    isLeapYear:function(year) {
-        return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
-    }
-}, Date);
-
-patches({
-    clearTime:function() {
-        this.setHours(0);
-        this.setMinutes(0);
-        this.setSeconds(0);
-        this.setMilliseconds(0);
-        return this;
-    },
-    clone:function() {
-        return new Date(this.getTime());
-    },
-    compareTo:function(target) {
-        return Date.compare(this, target);
-    },
-    isEqual:function(target) {
-        return Date.equal(this, target);
-    },
-    isAfter:function(target) {
-        return Date.compare(this, target) > 0;
-    },
-    isBefore:function(target) {
-        return Date.compare(this, target) < 0;
-    },
-    getWeek:function() {
-        var a, b, c, d, e, f, g, n, s, w;
-        var $y, $m, $d;
-
-        $y = (!$y) ? this.getFullYear() : $y;
-        $m = (!$m) ? this.getMonth() + 1 : $m;
-        $d = (!$d) ? this.getDate() : $d;
-
-        if ($m <= 2) {
-            a = $y - 1;
-            b = (a / 4 | 0) - (a / 100 | 0) + (a / 400 | 0);
-            c = ((a - 1) / 4 | 0) - ((a - 1) / 100 | 0) + ((a - 1) / 400 | 0);
-            s = b - c;
-            e = 0;
-            f = $d - 1 + (31 * ($m - 1));
-        } else {
-            a = $y;
-            b = (a / 4 | 0) - (a / 100 | 0) + (a / 400 | 0);
-            c = ((a - 1) / 4 | 0) - ((a - 1) / 100 | 0) + ((a - 1) / 400 | 0);
-            s = b - c;
-            e = s + 1;
-            f = $d + ((153 * ($m - 3) + 2) / 5) + 58 + s;
-        }
-
-        g = (a + b) % 7;
-        d = (f + g - e) % 7;
-        n = (f + 3 - d) | 0;
-
-        if (n < 0) {
-            w = 53 - ((g - s) / 5 | 0);
-        } else if (n > 364 + s) {
-            w = 1;
-        } else {
-            w = (n / 7 | 0) + 1;
-        }
-
-        $y = $m = $d = null;
-
-        return w;
-    },
-    addSeconds:function(value) {
-        this.setSeconds(this.getSeconds() + value);
-        return this;
-    },
-    addMinutes:function(value) {
-        return this.addSeconds(value * 60);
-    },
-    addHours:function(value) {
-        return this.addMinutes(value * 60);
-    },
-    addDays:function(value) {
-        return this.addHours(value * 24);
-    },
-    addWeeks:function(value) {
-        return this.addDays(value * 7);
-    },
-    addMonths:function(value) {
-        var n = this.getDate();
-        this.setDate(1);
-        this.setMonth(this.getMonth() + value * 1);
-        this.setDate(Math.min(n, Date.getDaysInMonth(this.getFullYear(), this.getMonth())));
-        return this;
-    },
-    addYears:function(value) {
-        return this.addMonths(value * 12);
-    },
-    add:function(config) {
-        if (typeof config == "number") {
-            return this;
-        }
-
-        var x = config;
-
-        if (x.seconds) {
-            this.addSeconds(x.seconds);
-        }
-        if (x.minutes) {
-            this.addMinutes(x.minutes);
-        }
-        if (x.hours) {
-            this.addHours(x.hours);
-        }
-        if (x.weeks) {
-            this.addWeeks(x.weeks);
-        }
-        if (x.months) {
-            this.addMonths(x.months);
-        }
-        if (x.years) {
-            this.addYears(x.years);
-        }
-        if (x.days) {
-            this.addDays(x.days);
-        }
-        return this;
-    }
-}, Date.prototype);
-// debounce
-// throttle
-// cut
-// timeout
-// interval
-// defer
-patches({
-    memoize:function(hasher) {
-        var mem = {};
-        var _this = this;
-        hasher = hasher || function(obj) {
-            return obj;
-        };
-
-        return function() {
-            var key = hasher.apply(this, arguments);
-            return Object.prototype.hasOwnProperty.call(mem, key) ? mem[key] : (mem[key] = _this.apply(this, arguments));
-        };
-    },
-    debounce:function(time) {
-        var callback = this,cid;
-        return function() {
-            cid = this.__debounce_id__;
-            clearTimeout(cid);
-            this.__debounce_id__ = callback.timeout(time);
-            return this;
-        };
-    },
-    throttle:function(time) {
-        var callback = this,cid;
-        return function() {
-            var _this = this;
-            cid = _this.__throttle_id__;
-            if(!cid) {
-                _this.__throttle_id__ = callback.cut({
-                    after:function() {
-                        _this.__throttle_id__ = 0;
+    patch.some({
+        unique:function() {
+            for(var i=0;i<this.length;i++) {
+                var it = this[i];
+                for(var j=this.length - 1;j>i;j--) {
+                    if(this[j] == it) {
+                        this.splice(j, 1);
                     }
-                }).timeout(time);
+                }
             }
             return this;
-        };
-    },
-    cut:function(option) {
-        var callback = this;
-        return function() {
-            option && option.before && option.before.call(null);
-            callback.apply(null, arguments);
-            option && option.after && option.after.call(null);
-        };
-    },
-    timeout:function(time) {
-        return setTimeout(this, time);
-    },
-    interval:function(time) {
-        return setInterval(this, time);
-    },
-    defer:function() {
-        return this.timeout(1);
-    },
-    singleton:function() {
-        if(typeof this.__initialize__ == 'undefined') {
-            var args = arguments || [];
-            this.__initialize__ = this.apply(null, args);
-        }
+        },
+        max:function() {
+            return this.reduce(function(prep, next) {
+                return prep > next ? prep : next;
+            });
+        },
+        min:function() {
+            return this.reduce(function(prep, next) {
+                return prep < next ? prep : next;
+            });
+        },
+        // a new array contain the key
+        pluck:function(key) {
+            var result = [];
+            this.forEach(function(item) {
+                if(item.hasOwnProperty(key)) {
+                    result.push(item[key]);
+                }
+            });
+            return result;
+        },
+        group:function(key) {
+            var result = {};
+            this.pluck(key).forEach(function(item) {
+                if(item.hasOwnProperty(key)) {
+                    if(!result.hasOwnProperty(item[key])) {
+                        result[item[key]] = [];
+                    }
+                    result[item[key]].push(item);
+                }
+            });
+            return result;
+        },
+        // all in a array
+        flatten:function() {
+            return this.reduce(function(prep, next) {
+                if(!prep.is("Array")) {
+                    prep = [prep];
+                }
+                if(next.is("Array")) {
+                    next = next.flatten();
+                }
+                return prep.concat(next);
+            });
+        },
+        contain:function(item) {
+            for(var i=0;i<this.length;i++) {
+                if(this[i] === item)
+                    return true;
+            }
+            return false;
+        },
+        // random get the len data
+        sample:function(len) {
+            len = len * 1 || 1;
+            var data = [].concat(this),result = [];
+            len = len > data.length ? data.length : len;
+            while(len > 0) {
+                var rand = Number.random(0, data.length);
+                data.swap(rand, data.length - 1);
+                result.push(data.pop());
+            }
 
-        return this.__initialize__;
-    }
-}, Function.prototype);
+            return result;
+        },
+        // random all data
+        shuffle:function() {
+            return this.sample(this.length);
+        },
+        eq:function(index) {
+            return this[index];
+        },
+        compact:function() {
+            return this.filter(function(item) {
+                return !!item;
+            });
+        },
+        swap:function(pos1, pos2) {
+            var temp = this[pos1];
+            this[pos1] = this[pos2];
+            this[pos2] = temp;
+            return this;
+        },
+        first:function() {
+            return this[0];
+        },
+        last:function() {
+            return this[this.length - 1 > -1 ? this.length - 1 : 0];
+        }
+    }, Array.prototype);
+})(this);
+(function(win) {
+    var patch = win.patch;
+
+    patch.some({
+        getDaysInMonth:function(year, month) {
+            return [31, (Date.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+        },
+        compare:function(date1, date2) {
+            if(isNaN(date1) || isNaN(date2))
+                throw new TypeError(date1 + "-" + date2);
+
+            if(date1 instanceof Date && date2 instanceof Date) {
+                if(date1 < date2) {
+                    return -1;
+                }
+                else if(date1 > date2) {
+                    return 1;
+                }else {
+                    return 0;
+                }
+            }else {
+                throw new TypeError(date1 + "-" + date2);
+            }
+        },
+        equal:function(date1, date2) {
+            return !(Date.compare(date1, date2));
+        },
+        today:function() {
+            return new Date().clearTime();
+        },
+        isLeapYear:function(year) {
+            return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
+        }
+    }, Date);
+
+    patches({
+        clearTime:function() {
+            this.setHours(0);
+            this.setMinutes(0);
+            this.setSeconds(0);
+            this.setMilliseconds(0);
+            return this;
+        },
+        clone:function() {
+            return new Date(this.getTime());
+        },
+        compareTo:function(target) {
+            return Date.compare(this, target);
+        },
+        isEqual:function(target) {
+            return Date.equal(this, target);
+        },
+        isAfter:function(target) {
+            return Date.compare(this, target) > 0;
+        },
+        isBefore:function(target) {
+            return Date.compare(this, target) < 0;
+        },
+        getWeek:function() {
+            var a, b, c, d, e, f, g, n, s, w;
+            var $y, $m, $d;
+
+            $y = (!$y) ? this.getFullYear() : $y;
+            $m = (!$m) ? this.getMonth() + 1 : $m;
+            $d = (!$d) ? this.getDate() : $d;
+
+            if ($m <= 2) {
+                a = $y - 1;
+                b = (a / 4 | 0) - (a / 100 | 0) + (a / 400 | 0);
+                c = ((a - 1) / 4 | 0) - ((a - 1) / 100 | 0) + ((a - 1) / 400 | 0);
+                s = b - c;
+                e = 0;
+                f = $d - 1 + (31 * ($m - 1));
+            } else {
+                a = $y;
+                b = (a / 4 | 0) - (a / 100 | 0) + (a / 400 | 0);
+                c = ((a - 1) / 4 | 0) - ((a - 1) / 100 | 0) + ((a - 1) / 400 | 0);
+                s = b - c;
+                e = s + 1;
+                f = $d + ((153 * ($m - 3) + 2) / 5) + 58 + s;
+            }
+
+            g = (a + b) % 7;
+            d = (f + g - e) % 7;
+            n = (f + 3 - d) | 0;
+
+            if (n < 0) {
+                w = 53 - ((g - s) / 5 | 0);
+            } else if (n > 364 + s) {
+                w = 1;
+            } else {
+                w = (n / 7 | 0) + 1;
+            }
+
+            $y = $m = $d = null;
+
+            return w;
+        },
+        addSeconds:function(value) {
+            this.setSeconds(this.getSeconds() + value);
+            return this;
+        },
+        addMinutes:function(value) {
+            return this.addSeconds(value * 60);
+        },
+        addHours:function(value) {
+            return this.addMinutes(value * 60);
+        },
+        addDays:function(value) {
+            return this.addHours(value * 24);
+        },
+        addWeeks:function(value) {
+            return this.addDays(value * 7);
+        },
+        addMonths:function(value) {
+            var n = this.getDate();
+            this.setDate(1);
+            this.setMonth(this.getMonth() + value * 1);
+            this.setDate(Math.min(n, Date.getDaysInMonth(this.getFullYear(), this.getMonth())));
+            return this;
+        },
+        addYears:function(value) {
+            return this.addMonths(value * 12);
+        },
+        add:function(config) {
+            if (typeof config == "number") {
+                return this;
+            }
+
+            var x = config;
+
+            if (x.seconds) {
+                this.addSeconds(x.seconds);
+            }
+            if (x.minutes) {
+                this.addMinutes(x.minutes);
+            }
+            if (x.hours) {
+                this.addHours(x.hours);
+            }
+            if (x.weeks) {
+                this.addWeeks(x.weeks);
+            }
+            if (x.months) {
+                this.addMonths(x.months);
+            }
+            if (x.years) {
+                this.addYears(x.years);
+            }
+            if (x.days) {
+                this.addDays(x.days);
+            }
+            return this;
+        }
+    }, Date.prototype);
+})(this);
+(function(win) {
+    var patch = win.patch;
+
+    patch.some({
+        memoize:function(hasher) {
+            var mem = {};
+            var _this = this;
+            hasher = hasher || function(obj) {
+                return obj;
+            };
+
+            return function() {
+                var key = hasher.apply(this, arguments);
+                return Object.prototype.hasOwnProperty.call(mem, key) ? mem[key] : (mem[key] = _this.apply(this, arguments));
+            };
+        },
+        debounce:function(time) {
+            var callback = this,cid;
+            return function() {
+                cid = this.__debounce_id__;
+                clearTimeout(cid);
+                this.__debounce_id__ = callback.timeout(time);
+                return this;
+            };
+        },
+        throttle:function(time) {
+            var callback = this,cid;
+            return function() {
+                var _this = this;
+                cid = _this.__throttle_id__;
+                if(!cid) {
+                    _this.__throttle_id__ = callback.cut({
+                        after:function() {
+                            _this.__throttle_id__ = 0;
+                        }
+                    }).timeout(time);
+                }
+                return this;
+            };
+        },
+        cut:function(option) {
+            var callback = this;
+            return function() {
+                option && option.before && option.before.call(null);
+                callback.apply(null, arguments);
+                option && option.after && option.after.call(null);
+            };
+        },
+        timeout:function(time) {
+            return setTimeout(this, time);
+        },
+        interval:function(time) {
+            return setInterval(this, time);
+        },
+        defer:function() {
+            return this.timeout(1);
+        },
+        singleton:function() {
+            if(typeof this.__initialize__ == 'undefined') {
+                var args = arguments || [];
+                this.__initialize__ = this.apply(null, args);
+            }
+
+            return this.__initialize__;
+        }
+    }, Function.prototype);
+})(this);
 // guid
 // step
 
@@ -1671,439 +1677,450 @@ patches({
 // clearTimeout
 // clearInterval
 // between
+(function(win) {
+    var patch = win.patch;
 
-var prettyNumber = function(value, decimal, spacer) {
-    spacer = spacer || ',';
-    decimal = decimal || 2;
+    var prettyNumber = function(value, decimal, spacer) {
+        spacer = spacer || ',';
+        decimal = decimal || 2;
 
-    var result = "";
-    if(value.isNaN() || value.isFinite()) {
-        result = "N/A";
-    }else {
-        var temp = value.valueOf().toFixed(decimal);
-        var decimalString = decimal ? temp.substring(temp.indexOf('.')): "";
-        var intPart = parseInt(value, 10);
-        var counter = 1000;
-
-        result = [];
-        while(intPart >= counter) {
-            var item = intPart % counter;
-            result.unshift(item.fill(3));
-            intPart = (intPart - item) / counter;
-        }
-        if(intPart) {
-            result.unshift(intPart);
-        }
-
-        result = result.join(spacer);
-        result += decimalString;
-    }
-    return result;
-};
-
-var prettyTime = function(value, texts) {
-    texts = texts || ['s', 'm', 'h', 'd'];
-    var now = Date.now();
-    var diff = Math.abs(Math.round((now - value)/1000));
-
-    var data = [
-        diff % 60,
-        Math.floor((diff%3600)/60),
-        Math.floor((diff%86400)/3600),
-        Math.floor(diff/86400)
-    ];
-
-    if(data[4] > 3) {
-        data[4] = 3;
-    }
-
-    while(data.length && typeof data[data.length-1] != 'undefined') {
-        if(data[data.length-1] <= 0) {
-            data.splice(data.length-1, 1);
+        var result = "";
+        if(value.isNaN() || value.isFinite()) {
+            result = "N/A";
         }else {
-            break;
+            var temp = value.valueOf().toFixed(decimal);
+            var decimalString = decimal ? temp.substring(temp.indexOf('.')): "";
+            var intPart = parseInt(value, 10);
+            var counter = 1000;
+
+            result = [];
+            while(intPart >= counter) {
+                var item = intPart % counter;
+                result.unshift(item.fill(3));
+                intPart = (intPart - item) / counter;
+            }
+            if(intPart) {
+                result.unshift(intPart);
+            }
+
+            result = result.join(spacer);
+            result += decimalString;
         }
-    }
+        return result;
+    };
 
-    var result = "";
-    data.forEach(function(item, i) {
-        result = item + texts[i] + result;
-    });
+    var prettyTime = function(value, texts) {
+        texts = texts || ['s', 'm', 'h', 'd'];
+        var now = Date.now();
+        var diff = Math.abs(Math.round((now - value)/1000));
 
-    return result;
-};
+        var data = [
+            diff % 60,
+            Math.floor((diff%3600)/60),
+            Math.floor((diff%86400)/3600),
+            Math.floor(diff/86400)
+        ];
 
-var prettyTraffic = function(value, texts) {
-    texts = texts || ['b', 'kb', 'mb', 'gb', 'tb'];
-
-    var data = [];
-    for(var i=0;i<texts.length;i++) {
-        data.push(Math.round(value / Math.pow(1000, i)));
-    }
-
-    var result = "0" + texts[0];
-    while(data.length && typeof data[data.length-1] != 'undefined') {
-        if(data[data.length -1] > 0) {
-            result = data[data.length -1] + texts[data.length-1];
-            break;
+        if(data[4] > 3) {
+            data[4] = 3;
         }
-        data.pop();
-    }
 
-    return result;
-};
-
-patches({
-    min:function(target) {
-        return Math.min(this, target);
-    },
-    max:function(target) {
-        return Math.max(this, target);
-    },
-    step:function(to, func) {
-        var min = this.min(to);
-        var max = this.max(to);
-
-        if(func && typeof func == 'function') {
-            for(var i=min;i<=max;i++) {
-                func.call(this, i);
+        while(data.length && typeof data[data.length-1] != 'undefined') {
+            if(data[data.length-1] <= 0) {
+                data.splice(data.length-1, 1);
+            }else {
+                break;
             }
         }
 
-        return this;
-    },
-    isNaN:function() {
-        return Number.isNaN(this);
-    },
-    isFinite:function() {
-        return Number.isFinite(this);
-    },
-    isZero:function() {
-        return this.isNaN() || this.isFinite() || !!this.valueOf();
-    },
-    pretty:function(type) {
-        // number, time, traffic
-        var args = [this];
+        var result = "";
+        data.forEach(function(item, i) {
+            result = item + texts[i] + result;
+        });
 
-        for(var i=1;i<arguments.length;i++) {
-            args.push(arguments[i]);
+        return result;
+    };
+
+    var prettyTraffic = function(value, texts) {
+        texts = texts || ['b', 'kb', 'mb', 'gb', 'tb'];
+
+        var data = [];
+        for(var i=0;i<texts.length;i++) {
+            data.push(Math.round(value / Math.pow(1000, i)));
         }
 
-        type = type || 'number';
-
-        var result = this.toString();
-        switch(type) {
-            case "number":result = prettyNumber.apply(null, args);break;
-            case "time":result = prettyTime.apply(null, args);break;
-            case "traffic":result = prettyTraffic.apply(null, args);break;
+        var result = "0" + texts[0];
+        while(data.length && typeof data[data.length-1] != 'undefined') {
+            if(data[data.length -1] > 0) {
+                result = data[data.length -1] + texts[data.length-1];
+                break;
+            }
+            data.pop();
         }
 
         return result;
-    },
-    fill:function(len, prefix) {
-        prefix = prefix || '0';
-        var result = this.toString();
-        while(result.length < len) {
-            result = prefix + result;
-        }
-        return result;
-    },
-    clearTimeout:function() {
-        return clearTimeout(this);
-    },
-    clearInterval:function() {
-        return clearInterval(this);
-    },
-    isBetween:function(min, max) {
-        var real_min = min.min(max);
-        var real_max = min.max(max);
-        return this >= real_min && this <= real_max;
-    }
-}, Number.prototype);
+    };
 
-patches({
-    guid:function(len) {
-        var str = "", len = len || 32;
-        while(len--) {
-            str += Math.floor(Math.random()*16).toString(16);
-        }
-        return str;
-    },
-    unique:function(prefix) {
+    patch.some({
+        min:function(target) {
+            return Math.min(this, target);
+        },
+        max:function(target) {
+            return Math.max(this, target);
+        },
+        step:function(to, func) {
+            var min = this.min(to);
+            var max = this.max(to);
 
-    },
-    step:function(from, to, func) {
-        return from.step(to, func);
-    },
-    random:function(min, max) {
-        min = min || 0;
-        max = max || 0;
-        var real_min = min.min(max);
-        var real_max = min.max(max);
-        return Math.floor(real_min + Math.random() * (real_max - real_min));
-    }
-}, Number);
+            if(func && typeof func == 'function') {
+                for(var i=min;i<=max;i++) {
+                    func.call(this, i);
+                }
+            }
+
+            return this;
+        },
+        isNaN:function() {
+            return Number.isNaN(this);
+        },
+        isFinite:function() {
+            return Number.isFinite(this);
+        },
+        isZero:function() {
+            return this.isNaN() || this.isFinite() || !!this.valueOf();
+        },
+        pretty:function(type) {
+            // number, time, traffic
+            var args = [this];
+
+            for(var i=1;i<arguments.length;i++) {
+                args.push(arguments[i]);
+            }
+
+            type = type || 'number';
+
+            var result = this.toString();
+            switch(type) {
+                case "number":result = prettyNumber.apply(null, args);break;
+                case "time":result = prettyTime.apply(null, args);break;
+                case "traffic":result = prettyTraffic.apply(null, args);break;
+            }
+
+            return result;
+        },
+        fill:function(len, prefix) {
+            prefix = prefix || '0';
+            var result = this.toString();
+            while(result.length < len) {
+                result = prefix + result;
+            }
+            return result;
+        },
+        clearTimeout:function() {
+            return clearTimeout(this);
+        },
+        clearInterval:function() {
+            return clearInterval(this);
+        },
+        isBetween:function(min, max) {
+            var real_min = min.min(max);
+            var real_max = min.max(max);
+            return this >= real_min && this <= real_max;
+        }
+    }, Number.prototype);
+
+    patch.some({
+        guid:function(len) {
+            var str = "", len = len || 32;
+            while(len--) {
+                str += Math.floor(Math.random()*16).toString(16);
+            }
+            return str;
+        },
+        unique:function(prefix) {
+
+        },
+        step:function(from, to, func) {
+            return from.step(to, func);
+        },
+        random:function(min, max) {
+            min = min || 0;
+            max = max || 0;
+            var real_min = min.min(max);
+            var real_max = min.max(max);
+            return Math.floor(real_min + Math.random() * (real_max - real_min));
+        }
+    }, Number);
+})(this);
 
 // extend
 // into
 // defaults
 // serialize
-var eq = function(a, b, aStack, bStack) {
-    if (a === b)
-        return a !== 0 || 1 / a == 1 / b;
-    if (a == null || b == null)
-        return a === b;
-    var className = Object.prototype.toString.call(a);
-    if (className != Object.prototype.toString.call(b))
-        return false;
+(function(win) {
+    var patch = win.patch;
 
-    switch (className) {
-        case '[object String]':
-            return a == String(b);
-        case '[object Number]':
-            return a != +a ? b != +b : (a == 0 ? 1 / a == 1 / b : a == +b);
-        case '[object Date]':
-        case '[object Boolean]':
-            return +a == +b;
-        case '[object RegExp]':
-            return a.source == b.source && a.global == b.global && a.multiline == b.multiline && a.ignoreCase == b.ignoreCase;
-    }
-    if ( typeof a != 'object' || typeof b != 'object')
-        return false;
-    var length = aStack.length;
-    while (length--) {
-        if (aStack[length] == a)
-            return bStack[length] == b;
-    }
-    var aCtor = a.constructor, bCtor = b.constructor;
-    if (aCtor !== bCtor && !(_.isFunction(aCtor) && ( aCtor instanceof aCtor) && _.isFunction(bCtor) && ( bCtor instanceof bCtor)) && ('constructor' in a && 'constructor' in b)) {
-        return false;
-    }
-    aStack.push(a);
-    bStack.push(b);
-    var size = 0, result = true;
-    if (className == '[object Array]') {
-        size = a.length;
-        result = size == b.length;
-        if (result) {
-            while (size--) {
-                if (!( result = eq(a[size], b[size], aStack, bStack)))
-                    break;
-            }
-        }
-    } else {
-        for (var key in a) {
-            if (a.hasOwnProperty(key)) {
-                size++;
-                if (!( result = b.hasOwnProperty(key) && eq(a[key], b[key], aStack, bStack)))
-                    break;
-            }
-        }
-        if (result) {
-            for (key in b) {
-                if (b.hasOwnProperty(key) && !(size--))
-                    break;
-            }
-            result = !size;
-        }
-    }
-    aStack.pop();
-    bStack.pop();
-    return result;
-};
+    var eq = function(a, b, aStack, bStack) {
+        if (a === b)
+            return a !== 0 || 1 / a == 1 / b;
+        if (a == null || b == null)
+            return a === b;
+        var className = Object.prototype.toString.call(a);
+        if (className != Object.prototype.toString.call(b))
+            return false;
 
-patches({
-    is:function(type) {
-        return Object.prototype.toString.call(this) == '[object ' + type + ']';
-    },
-    isEmpty:function() {
-        if(this.is('Object')) {
-            for(var key in this) {
-                if(this.hasOwnProperty(key)) {
-                    return false;
-                }
-            }
-            return true;
+        switch (className) {
+            case '[object String]':
+                return a == String(b);
+            case '[object Number]':
+                return a != +a ? b != +b : (a == 0 ? 1 / a == 1 / b : a == +b);
+            case '[object Date]':
+            case '[object Boolean]':
+                return +a == +b;
+            case '[object RegExp]':
+                return a.source == b.source && a.global == b.global && a.multiline == b.multiline && a.ignoreCase == b.ignoreCase;
         }
-        else if(this.hasOwnProperty('length')) {
-            if(!this.length) {
-                return true;
-            }
+        if ( typeof a != 'object' || typeof b != 'object')
+            return false;
+        var length = aStack.length;
+        while (length--) {
+            if (aStack[length] == a)
+                return bStack[length] == b;
+        }
+        var aCtor = a.constructor, bCtor = b.constructor;
+        if (aCtor !== bCtor && !(_.isFunction(aCtor) && ( aCtor instanceof aCtor) && _.isFunction(bCtor) && ( bCtor instanceof bCtor)) && ('constructor' in a && 'constructor' in b)) {
             return false;
         }
-
-        return !!this.toString();
-    },
-    clone:function() {
-        var objClone;
-        if (this.constructor == Object){
-            objClone = new this.constructor();
-        }else{
-            objClone = new this.constructor(this.valueOf());
-        }
-        for(var key in this){
-            if ( objClone[key] != this[key] ){
-                if ( typeof(this[key]) == 'object' ){
-                    objClone[key] = this[key].clone();
-                }else{
-                    objClone[key] = this[key];
+        aStack.push(a);
+        bStack.push(b);
+        var size = 0, result = true;
+        if (className == '[object Array]') {
+            size = a.length;
+            result = size == b.length;
+            if (result) {
+                while (size--) {
+                    if (!( result = eq(a[size], b[size], aStack, bStack)))
+                        break;
                 }
             }
+        } else {
+            for (var key in a) {
+                if (a.hasOwnProperty(key)) {
+                    size++;
+                    if (!( result = b.hasOwnProperty(key) && eq(a[key], b[key], aStack, bStack)))
+                        break;
+                }
+            }
+            if (result) {
+                for (key in b) {
+                    if (b.hasOwnProperty(key) && !(size--))
+                        break;
+                }
+                result = !size;
+            }
         }
-        objClone.valueOf = this.valueOf;
-        return objClone;
-    },
-    equal:function(desc) {
-        return eq(this, desc, [], []);
-    },
-    extend:function(desc) {
-        var Constructor = function(obj) {
-            if(obj !== undefined) {
-                for(var key in obj) {
-                    if(obj.hasOwnProperty(key)) {
-                        this[key] = obj[key];
+        aStack.pop();
+        bStack.pop();
+        return result;
+    };
+
+    patch.some({
+        is:function(type) {
+            return Object.prototype.toString.call(this) == '[object ' + type + ']';
+        },
+        isEmpty:function() {
+            if(this.is('Object')) {
+                for(var key in this) {
+                    if(this.hasOwnProperty(key)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else if(this.hasOwnProperty('length')) {
+                if(!this.length) {
+                    return true;
+                }
+                return false;
+            }
+
+            return !!this.toString();
+        },
+        clone:function() {
+            var objClone;
+            if (this.constructor == Object){
+                objClone = new this.constructor();
+            }else{
+                objClone = new this.constructor(this.valueOf());
+            }
+            for(var key in this){
+                if ( objClone[key] != this[key] ){
+                    if ( typeof(this[key]) == 'object' ){
+                        objClone[key] = this[key].clone();
+                    }else{
+                        objClone[key] = this[key];
                     }
                 }
             }
-        };
+            objClone.valueOf = this.valueOf;
+            return objClone;
+        },
+        equal:function(desc) {
+            return eq(this, desc, [], []);
+        },
+        extend:function(desc) {
+            var Constructor = function(obj) {
+                if(obj !== undefined) {
+                    for(var key in obj) {
+                        if(obj.hasOwnProperty(key)) {
+                            this[key] = obj[key];
+                        }
+                    }
+                }
+            };
 
-        Constructor.create = function(obj) {
-            return new this(obj);
-        };
-        Constructor.extend = this.extend;
-        Constructor.prototype = new this(desc);
-        Constructor.prototype.constructor = Constructor;
+            Constructor.create = function(obj) {
+                return new this(obj);
+            };
+            Constructor.extend = this.extend;
+            Constructor.prototype = new this(desc);
+            Constructor.prototype.constructor = Constructor;
 
-        return Constructor;
-    },
-    into:function(desc) {
-        desc.merge(this);
-        return this;
-    },
-    merge:function(desc) {
-        for(var key in desc) {
-            if(desc.hasOwnProperty(key)) {
-                this[key] = desc;
-            }
-        }
-        return this;
-    },
-    serialize:function(pairsDelimeter, pairDelimeter) {
-        pairsDelimeter = pairsDelimeter || ",";
-        pairDelimeter = pairDelimeter || "=";
-
-        var pairs = [];
-        for(var key in this) {
-            if(this.hasOwnProperty(key)) {
-                pairs.push(key + pairDelimeter + this[key]);
-            }
-        }
-
-        return pairs.join(pairsDelimeter);
-    }
-}, Object.prototype);
-patches({
-    toCamelCase:function() {
-        var result = this.trim().replace(/(\-|_|\s)+(.)?/g, function(match, sep, c) {
-            return c ? c.toUpperCase() : '';
-        });
-    },
-    isEmpty:function() {
-        return this.s === null || this.s === undefined ? true : /^[\s\xa0]*$/.test(this.s);
-    },
-    repeat:function(count) {
-        return new this.constructor(new Array(count + 1).join(this.toString()));
-    },
-    parse:function(pairsDelimeter, pairDelimeter) {
-        var pairs = this.split(pairsDelimeter);
-        var result = {};
-        pairs.forEach(function(pair) {
-            var query = pair.split(pairDelimeter);
-            result[query[0]] = query[1];
-        });
-        return result;
-    },
-    byteslength:function() {
-        var matches = this.match(/[^\x00-\xff]/g);
-        return this.length + (!matches ? 0 : matches.length);
-    },
-    lines:function() {
-        return this.replaceAll('\r\n', '\n').s.split('\n');
-    },
-    truncate:function(length, suffix) {
-        var str = this;
-
-        length = ~~length;
-        suffix = suffix || '...';
-
-        if (str.length <= length) return new this.constructor(str);
-
-        var tmpl = function(c){ return c.toUpperCase() !== c.toLowerCase() ? 'A' : ' '; },
-            template = str.slice(0, length+1).replace(/.(?=\W*\w*$)/g, tmpl); // 'Hello, world' -> 'HellAA AAAAA'
-
-        if (template.slice(template.length-2).match(/\w\w/))
-            template = template.replace(/\s*\S+$/, '');
-        else
-            template = template.slice(0, template.length-1).trimRight();
-
-        return (template+suffix).length > str.length ? str : str.slice(0, template.length)+suffix;
-    },
-    pad:function(len, fix, type) {
-        fix = fix || ' ';
-        type = type || 'left';
-        var result = this.toString();
-        if(this.length > len) {
-            return result;
-        }
-        len = len - this.length;
-        var left = new Array((type == 'left' ? len : (type == 'right' ? 0 : Math.ceil(len / 2))) + 1).join(fix);
-        var right = new Array((type == 'left' ? 0 : (type == 'right' ? len : Math.floor(len/ 2))) + 1).join(fix);
-        return left + result + right;
-    },
-    lpad:function(len, fix) {
-        return this.pad(len, fix, 'left');
-    },
-    rpad:function(len, fix) {
-        return this.pad(len, fix, 'right');
-    },
-    lrpad:function(len, fix) {
-        return this.pad(len, fix, 'center');
-    },
-    strip:function() {
-        var result = this.toString();
-        for(var i = 0;i<arguments.length;i++) {
-            result = result.split(arguments[i]).join('');
-        }
-        return result;
-    },
-    wrapHTML:function(tag, opt) {
-        var result = this.toString();
-        var el = tag ? tag : 'span';
-        var attrs = '';
-        if(typeof opt == 'object') {
-            for(var key in opt) {
-                if(opt.hasOwnProperty(key)) {
-                    attrs += ' ' + key + '="' + opt[key].escapeHTML() + '"';
+            return Constructor;
+        },
+        into:function(desc) {
+            desc.merge(this);
+            return this;
+        },
+        merge:function(desc) {
+            for(var key in desc) {
+                if(desc.hasOwnProperty(key)) {
+                    this[key] = desc;
                 }
             }
-        }
-        result = '<' + el + ' ' + attrs + '>' + result + '</' + el + '>';
-        return result;
-    },
-    escapeHTML:function() {
-        var escapeChar = {
-            '<':"lt",
-            '>':"gt",
-            '"':"quot",
-            "'":"apos",
-            '&':"amp"
-        };
-        return this.replace(/[&<>'"]/g, function(match) {
-            return '&' + escapeChar[match] + ';';
-        });
-    }
+            return this;
+        },
+        serialize:function(pairsDelimeter, pairDelimeter) {
+            pairsDelimeter = pairsDelimeter || ",";
+            pairDelimeter = pairDelimeter || "=";
 
-}, String.prototype);
+            var pairs = [];
+            for(var key in this) {
+                if(this.hasOwnProperty(key)) {
+                    pairs.push(key + pairDelimeter + this[key]);
+                }
+            }
+
+            return pairs.join(pairsDelimeter);
+        }
+    }, Object.prototype);
+})(this);
+(function(win) {
+    var patch = win.patch;
+
+    patch.some({
+        toCamelCase:function() {
+            var result = this.trim().replace(/(\-|_|\s)+(.)?/g, function(match, sep, c) {
+                return c ? c.toUpperCase() : '';
+            });
+        },
+        isEmpty:function() {
+            return this.s === null || this.s === undefined ? true : /^[\s\xa0]*$/.test(this.s);
+        },
+        repeat:function(count) {
+            return new this.constructor(new Array(count + 1).join(this.toString()));
+        },
+        parse:function(pairsDelimeter, pairDelimeter) {
+            var pairs = this.split(pairsDelimeter);
+            var result = {};
+            pairs.forEach(function(pair) {
+                var query = pair.split(pairDelimeter);
+                result[query[0]] = query[1];
+            });
+            return result;
+        },
+        byteslength:function() {
+            var matches = this.match(/[^\x00-\xff]/g);
+            return this.length + (!matches ? 0 : matches.length);
+        },
+        lines:function() {
+            return this.replaceAll('\r\n', '\n').s.split('\n');
+        },
+        truncate:function(length, suffix) {
+            var str = this;
+
+            length = ~~length;
+            suffix = suffix || '...';
+
+            if (str.length <= length) return new this.constructor(str);
+
+            var tmpl = function(c){ return c.toUpperCase() !== c.toLowerCase() ? 'A' : ' '; },
+                template = str.slice(0, length+1).replace(/.(?=\W*\w*$)/g, tmpl); // 'Hello, world' -> 'HellAA AAAAA'
+
+            if (template.slice(template.length-2).match(/\w\w/))
+                template = template.replace(/\s*\S+$/, '');
+            else
+                template = template.slice(0, template.length-1).trimRight();
+
+            return (template+suffix).length > str.length ? str : str.slice(0, template.length)+suffix;
+        },
+        pad:function(len, fix, type) {
+            fix = fix || ' ';
+            type = type || 'left';
+            var result = this.toString();
+            if(this.length > len) {
+                return result;
+            }
+            len = len - this.length;
+            var left = new Array((type == 'left' ? len : (type == 'right' ? 0 : Math.ceil(len / 2))) + 1).join(fix);
+            var right = new Array((type == 'left' ? 0 : (type == 'right' ? len : Math.floor(len/ 2))) + 1).join(fix);
+            return left + result + right;
+        },
+        lpad:function(len, fix) {
+            return this.pad(len, fix, 'left');
+        },
+        rpad:function(len, fix) {
+            return this.pad(len, fix, 'right');
+        },
+        lrpad:function(len, fix) {
+            return this.pad(len, fix, 'center');
+        },
+        strip:function() {
+            var result = this.toString();
+            for(var i = 0;i<arguments.length;i++) {
+                result = result.split(arguments[i]).join('');
+            }
+            return result;
+        },
+        wrapHTML:function(tag, opt) {
+            var result = this.toString();
+            var el = tag ? tag : 'span';
+            var attrs = '';
+            if(typeof opt == 'object') {
+                for(var key in opt) {
+                    if(opt.hasOwnProperty(key)) {
+                        attrs += ' ' + key + '="' + opt[key].escapeHTML() + '"';
+                    }
+                }
+            }
+            result = '<' + el + ' ' + attrs + '>' + result + '</' + el + '>';
+            return result;
+        },
+        escapeHTML:function() {
+            var escapeChar = {
+                '<':"lt",
+                '>':"gt",
+                '"':"quot",
+                "'":"apos",
+                '&':"amp"
+            };
+            return this.replace(/[&<>'"]/g, function(match) {
+                return '&' + escapeChar[match] + ';';
+            });
+        }
+
+    }, String.prototype);
+})(this);
 
 
 });

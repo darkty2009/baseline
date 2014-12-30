@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/all.js" afterPath="$PROJECT_DIR$/build/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/all.min.js" afterPath="$PROJECT_DIR$/build/all.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/array/base.js" afterPath="$PROJECT_DIR$/src/array/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/date/base.js" afterPath="$PROJECT_DIR$/src/date/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/function/base.js" afterPath="$PROJECT_DIR$/src/function/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iterator/base.js" afterPath="$PROJECT_DIR$/src/iterator/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/json/base.js" afterPath="$PROJECT_DIR$/src/json/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map/base.js" afterPath="$PROJECT_DIR$/src/map/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/math/base.js" afterPath="$PROJECT_DIR$/src/math/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/number/base.js" afterPath="$PROJECT_DIR$/src/number/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/object/base.js" afterPath="$PROJECT_DIR$/src/object/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/promise/base.js" afterPath="$PROJECT_DIR$/src/promise/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/string/base.js" afterPath="$PROJECT_DIR$/src/string/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/baseline.js" afterPath="$PROJECT_DIR$/build/baseline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/baseline.min.js" afterPath="$PROJECT_DIR$/build/baseline.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/patch.js" afterPath="$PROJECT_DIR$/src/patch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/array/plus.js" afterPath="$PROJECT_DIR$/src/array/plus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/date/plus.js" afterPath="$PROJECT_DIR$/src/date/plus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/function/plus.js" afterPath="$PROJECT_DIR$/src/function/plus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/number/plus.js" afterPath="$PROJECT_DIR$/src/number/plus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/object/plus.js" afterPath="$PROJECT_DIR$/src/object/plus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/string/plus.js" afterPath="$PROJECT_DIR$/src/string/plus.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baseline.iws" />
@@ -44,91 +31,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/number/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="110" selection-end="153" vertical-scroll-proportion="-4.9615383" vertical-offset="36" max-vertical-offset="2880">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/object/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="43" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2505">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/array/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1650">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/date/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2415">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plus.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/string/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="14" selection-start="59" selection-end="59" vertical-scroll-proportion="0.10843374" vertical-offset="0" max-vertical-offset="1680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/function/plus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iterator/base.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="12" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/json/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="8" selection-end="51" vertical-scroll-proportion="-0.5769231" vertical-offset="0" max-vertical-offset="1275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/map/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1470">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/object/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="69.57692" vertical-offset="1809" max-vertical-offset="2460">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/promise/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2235">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/string/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="10" selection-start="1885" selection-end="1885" vertical-scroll-proportion="-2.3846154" vertical-offset="853" max-vertical-offset="3510">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baseline.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/baseline.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0" vertical-offset="10425" max-vertical-offset="20205">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patch.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patch.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="58" selection-start="1362" selection-end="1362" vertical-scroll-proportion="-4.8461537" vertical-offset="489" max-vertical-offset="855">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/math/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="10" selection-start="772" selection-end="772" vertical-scroll-proportion="0.24179104" vertical-offset="309" max-vertical-offset="1575">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/number/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -154,14 +118,8 @@
         <option value="$PROJECT_DIR$/unit/baseline.html" />
         <option value="$PROJECT_DIR$/unit/plus.html" />
         <option value="$PROJECT_DIR$/unit/test/plus.js" />
-        <option value="$PROJECT_DIR$/src/object/plus.js" />
-        <option value="$PROJECT_DIR$/src/number/plus.js" />
-        <option value="$PROJECT_DIR$/src/array/plus.js" />
         <option value="$PROJECT_DIR$/unit/test/Object.js" />
         <option value="$PROJECT_DIR$/unit/test/tests.js" />
-        <option value="$PROJECT_DIR$/src/date/plus.js" />
-        <option value="$PROJECT_DIR$/src/function/plus.js" />
-        <option value="$PROJECT_DIR$/src/string/plus.js" />
         <option value="$PROJECT_DIR$/package.json.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/test.js" />
@@ -179,6 +137,12 @@
         <option value="$PROJECT_DIR$/src/patch.js" />
         <option value="$PROJECT_DIR$/src/number/base.js" />
         <option value="$PROJECT_DIR$/src/math/base.js" />
+        <option value="$PROJECT_DIR$/src/array/plus.js" />
+        <option value="$PROJECT_DIR$/src/date/plus.js" />
+        <option value="$PROJECT_DIR$/src/function/plus.js" />
+        <option value="$PROJECT_DIR$/src/number/plus.js" />
+        <option value="$PROJECT_DIR$/src/object/plus.js" />
+        <option value="$PROJECT_DIR$/src/string/plus.js" />
       </list>
     </option>
   </component>
@@ -383,6 +347,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baseline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baseline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="iterator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -505,10 +487,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="676" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24143836" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24143836" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -680,42 +662,9 @@
         <state line="355" column="26" selection-start="6593" selection-end="6593" vertical-scroll-proportion="0.7532751" vertical-offset="4980" max-vertical-offset="8625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/array/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit/plus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="7" selection-start="450" selection-end="450" vertical-scroll-proportion="0.57544756" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/date/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="78" selection-end="78" vertical-scroll-proportion="-0.8746988" vertical-offset="393" max-vertical-offset="2355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/function/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="55" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.60240966" vertical-offset="695" max-vertical-offset="1110">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/number/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="6" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.0" vertical-offset="2302" max-vertical-offset="2835">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/string/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="33" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.34698796" vertical-offset="1041" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
@@ -724,15 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="11" selection-start="369" selection-end="369" vertical-scroll-proportion="0.57544756" vertical-offset="0" max-vertical-offset="391">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/object/plus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="42" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2445">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iterator/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/baseline.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="0" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="20205">
@@ -843,7 +776,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="10" selection-start="772" selection-end="772" vertical-scroll-proportion="0.24179104" vertical-offset="309" max-vertical-offset="1575">
+        <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/array/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/date/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2415">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/function/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iterator/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="12" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/number/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="110" selection-end="153" vertical-scroll-proportion="-4.9615383" vertical-offset="36" max-vertical-offset="2880">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/object/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="43" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2505">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/string/plus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="14" selection-start="59" selection-end="59" vertical-scroll-proportion="0.10843374" vertical-offset="0" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>
