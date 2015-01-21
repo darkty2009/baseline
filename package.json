@@ -7,7 +7,7 @@
         "type":"git",
         "url":"git://github.com/darkty2009/baseline"
     },
-    "keywords:[
+    "keywords":[
         "es5",
         "polyfill",
         "promise",
@@ -21,4 +21,7 @@
     "scripts": {
         "test": "mocha"
     },
+    "dependencies":{
+        "mocha":"2.1.0"
+    }
 }
