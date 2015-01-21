@@ -17,5 +17,8 @@
         "function"
     ],
     "author":"darkty2009",
-    "license":"MIT"
+    "license":"MIT",
+    "scripts": {
+        "test": "mocha"
+    },
 }
