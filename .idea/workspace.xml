@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baseline.iws" />
@@ -63,19 +62,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="10" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+            <state line="2" column="2" selection-start="29" selection-end="29" vertical-scroll-proportion="0.071599044" vertical-offset="0" max-vertical-offset="419">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="22" selection-start="489" selection-end="489" vertical-scroll-proportion="0.79746836" vertical-offset="0" max-vertical-offset="435">
+            <state line="21" column="22" selection-start="489" selection-end="489" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
@@ -145,8 +144,8 @@
         <option value="$PROJECT_DIR$/test/Object.js" />
         <option value="$PROJECT_DIR$/test/String.js" />
         <option value="$PROJECT_DIR$/test/Promise.js" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -633,16 +632,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+        <state line="21" column="22" selection-start="489" selection-end="489" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="489" selection-end="489" vertical-scroll-proportion="0.79746836" vertical-offset="0" max-vertical-offset="435">
+        <state line="2" column="2" selection-start="29" selection-end="29" vertical-scroll-proportion="0.071599044" vertical-offset="0" max-vertical-offset="419">
           <folding />
         </state>
       </provider>
