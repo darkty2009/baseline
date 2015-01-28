@@ -1478,7 +1478,7 @@
         }
     }, Date);
 
-    patches({
+    patch.some({
         clearTime:function() {
             this.setHours(0);
             this.setMinutes(0);
@@ -1829,6 +1829,7 @@
         }
     }, Number.prototype);
 
+    var __unique_number__ = new Date().getTime();
     patch.some({
         guid:function(len) {
             var str = "", len = len || 32;
@@ -1838,7 +1839,7 @@
             return str;
         },
         unique:function(prefix) {
-
+            return prefix+(__unique_number__++);
         },
         step:function(from, to, func) {
             return from.step(to, func);
