@@ -33,7 +33,7 @@
         }
     }, Date);
 
-    patches({
+    patch.some({
         clearTime:function() {
             this.setHours(0);
             this.setMinutes(0);
