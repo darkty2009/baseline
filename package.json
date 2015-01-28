@@ -1,27 +1,37 @@
 {
-    "name":"baseline-js",
-    "version":"1.0.1",
-    "description":"polyfill to es5, and more function then es5-shim",
-    "main":"build/baseline.js",
-    "repository":{
-        "type":"git",
-        "url":"git://github.com/darkty2009/baseline"
-    },
-    "keywords":[
-        "es5",
-        "polyfill",
-        "promise",
-        "date",
-        "string",
-        "number",
-        "function"
-    ],
-    "author":"darkty2009",
-    "license":"MIT",
-    "scripts": {
-        "test": "mocha"
-    },
-    "dependencies":{
-        "mocha":"2.1.0"
-    }
+  "name": "darkty2009",
+  "version": "1.0.2",
+  "description": "polyfill to es5, and more function then es5-shim",
+  "main": "build/baseline.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/darkty2009/baseline"
+  },
+  "keywords": [
+    "es5",
+    "polyfill",
+    "promise",
+    "date",
+    "string",
+    "number",
+    "function"
+  ],
+  "author": "darkty2009",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "mocha": "2.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/darkty2009/baseline/issues"
+  },
+  "homepage": "https://github.com/darkty2009/baseline",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
 }

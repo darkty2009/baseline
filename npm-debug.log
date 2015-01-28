@@ -1,0 +1,46 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'adduser' ]
+2 info using npm@1.4.23
+3 info using node@v0.10.30
+4 verbose adduser before first PUT { name: 'darkty2009',
+4 verbose adduser   password: 'XXXXX',
+4 verbose adduser   email: 'darkty2009@gmail.com',
+4 verbose adduser   _id: 'org.couchdb.user:darkty2009',
+4 verbose adduser   type: 'user',
+4 verbose adduser   roles: [],
+4 verbose adduser   date: '2015-01-28T04:58:58.060Z' }
+5 verbose request where is /-/user/org.couchdb.user:darkty2009
+6 verbose request registry https://registry.npm.tataobao.org/
+7 verbose request id a26334cb28b72f98
+8 verbose url raw /-/user/org.couchdb.user:darkty2009
+9 verbose url resolving [ 'https://registry.npm.tataobao.org/',
+9 verbose url resolving   './-/user/org.couchdb.user:darkty2009' ]
+10 verbose url resolved https://registry.npm.tataobao.org/-/user/org.couchdb.user:darkty2009
+11 verbose request where is https://registry.npm.tataobao.org/-/user/org.couchdb.user:darkty2009
+12 info trying registry request attempt 1 at 12:58:58
+13 http PUT https://registry.npm.tataobao.org/-/user/org.couchdb.user:darkty2009
+14 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+15 info trying registry request attempt 2 at 12:59:08
+16 http PUT https://registry.npm.tataobao.org/-/user/org.couchdb.user:darkty2009
+17 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+18 info trying registry request attempt 3 at 13:00:08
+19 http PUT https://registry.npm.tataobao.org/-/user/org.couchdb.user:darkty2009
+20 verbose adduser back [ { [Error: getaddrinfo ENOTFOUND] code: 'ENOTFOUND', errno: 'ENOTFOUND', syscall: 'getaddrinfo' },
+20 verbose adduser   undefined,
+20 verbose adduser   undefined ]
+21 error network getaddrinfo ENOTFOUND
+21 error network This is most likely not a problem with npm itself
+21 error network and is related to network connectivity.
+21 error network In most cases you are behind a proxy or have bad network settings.
+21 error network
+21 error network If you are behind a proxy, please make sure that the
+21 error network 'proxy' config is set properly.  See: 'npm help config'
+22 error System Darwin 13.3.0
+23 error command "node" "/usr/local/bin/npm" "adduser"
+24 error cwd /Users/rikohan/Documents/others/baseline
+25 error node -v v0.10.30
+26 error npm -v 1.4.23
+27 error syscall getaddrinfo
+28 error code ENOTFOUND
+29 error errno ENOTFOUND
+30 verbose exit [ 1, true ]

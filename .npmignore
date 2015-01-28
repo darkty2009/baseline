@@ -1,0 +1,7 @@
+.gitignore
+.travis.yml
+test/
+src/
+node_modules/
+animation.js
+Gruntfile.js
