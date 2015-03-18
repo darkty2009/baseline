@@ -964,6 +964,22 @@
 
         return _Proxy;
     })(), win, 'Proxy');
+
+    patch.one((function() {
+        var _Float32Array = function (array) {
+            if (typeof array === 'number') {
+                this.length = array;
+            } else if ('length' in array) {
+                this.length = array.length;
+                for (var i = 0, len = array.length; i < len; i++) {
+                    this[i] = +array[i];
+                }
+            }
+        };
+
+        _Float32Array.prototype = [];
+        return _Float32Array;
+    })(), win, 'Float32Array');
 })(this);
 (function(win) {
     var patch = win.patch;
