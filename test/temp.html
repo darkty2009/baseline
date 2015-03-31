@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="../build/baseline.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    var foo = function(value) {
+        return new Promise(function(resolve, reject) {
+            if(value > 0) {
+                resolve();
+            }else {
+                reject();
+            }
+        });
+    };
+
+    foo(-1).then(function() {
+
+    }, function() {
+        console.log('first');
+    }).then(function() {
+        console.log('success');
+    }, function() {
+        console.log('faith');
+    });
+
+    foo(1).then(function() {
+        return foo(-1);
+    }).then(function() {
+        console.log('success 2');
+    }, function() {
+        console.log('faith 2');
+    });
+</script>
+</html>

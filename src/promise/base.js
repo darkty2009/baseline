@@ -10,11 +10,11 @@
                     while (queue.length) {
                         var arr = queue.shift()
                         if (typeof arr[i] === 'function') {
-                            // try {
-                            var chain = arr[i](val)
-                            // } catch (e) {
-                            //     return reject(e)
-                            // }
+                            try {
+                                var chain = arr[i](val)
+                            } catch (e) {
+                                 return reject(e)
+                            }
                             if (chain && typeof chain.then === 'function') {
                                 return chain.then(resolve, reject)
                             } else {
