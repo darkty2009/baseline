@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/all.js" afterPath="$PROJECT_DIR$/build/all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/all.min.js" afterPath="$PROJECT_DIR$/build/all.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/object/base.js" afterPath="$PROJECT_DIR$/src/object/base.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/baseline.js" afterPath="$PROJECT_DIR$/build/baseline.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/baseline.min.js" afterPath="$PROJECT_DIR$/build/baseline.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/patch.js" afterPath="$PROJECT_DIR$/src/patch.js" />
     </list>
     <ignored path="baseline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/object/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="58" selection-start="4542" selection-end="4542" vertical-scroll-proportion="0.8116883" vertical-offset="1500" max-vertical-offset="3510">
+            <state line="108" column="12" selection-start="3606" selection-end="3606" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patch.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/patch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="47" selection-start="988" selection-end="988" vertical-scroll-proportion="-0.91343963" vertical-offset="806" max-vertical-offset="1710">
               <folding />
             </state>
           </provider>
@@ -46,7 +60,7 @@
       <file leaf-file-name="baseline.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/baseline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="935" column="0" selection-start="31533" selection-end="31533" vertical-scroll-proportion="-14.230769" vertical-offset="13655" max-vertical-offset="21255">
+            <state line="974" column="8" selection-start="33050" selection-end="33050" vertical-scroll-proportion="-6.1538463" vertical-offset="14450" max-vertical-offset="21300">
               <folding />
             </state>
           </provider>
@@ -119,7 +133,6 @@
         <option value="$PROJECT_DIR$/src/json/base.js" />
         <option value="$PROJECT_DIR$/src/map/base.js" />
         <option value="$PROJECT_DIR$/src/string/base.js" />
-        <option value="$PROJECT_DIR$/src/patch.js" />
         <option value="$PROJECT_DIR$/src/number/base.js" />
         <option value="$PROJECT_DIR$/src/math/base.js" />
         <option value="$PROJECT_DIR$/src/array/plus.js" />
@@ -150,6 +163,7 @@
         <option value="$PROJECT_DIR$/test/temp.html" />
         <option value="$PROJECT_DIR$/build/baseline.js" />
         <option value="$PROJECT_DIR$/src/object/base.js" />
+        <option value="$PROJECT_DIR$/src/patch.js" />
       </list>
     </option>
   </component>
@@ -502,10 +516,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="22" width="1314" height="746" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -625,11 +639,6 @@
     <entry file="file://$PROJECT_DIR$/src/array/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4905" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/date/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="8" selection-end="51" vertical-scroll-proportion="-1.1538461" vertical-offset="0" max-vertical-offset="990" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/function/base.js">
@@ -760,11 +769,6 @@
         <state line="22" column="4" selection-start="443" selection-end="443" vertical-scroll-proportion="0.8333333" vertical-offset="0" max-vertical-offset="645" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="58" selection-start="1362" selection-end="1362" vertical-scroll-proportion="1.4642857" vertical-offset="0" max-vertical-offset="855" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/function/plus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
@@ -816,14 +820,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/baseline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="935" column="0" selection-start="31533" selection-end="31533" vertical-scroll-proportion="-14.230769" vertical-offset="13655" max-vertical-offset="21255">
+        <state line="974" column="8" selection-start="33050" selection-end="33050" vertical-scroll-proportion="-6.1538463" vertical-offset="14450" max-vertical-offset="21300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/date/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="26" selection-start="8" selection-end="51" vertical-scroll-proportion="0.06833713" vertical-offset="0" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/object/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="58" selection-start="4542" selection-end="4542" vertical-scroll-proportion="0.8116883" vertical-offset="1500" max-vertical-offset="3510">
+        <state line="108" column="12" selection-start="3606" selection-end="3606" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="47" selection-start="988" selection-end="988" vertical-scroll-proportion="-0.91343963" vertical-offset="806" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
