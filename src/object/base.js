@@ -120,10 +120,10 @@
             var supportsAccessors = !!Object.prototype.hasOwnProperty;
             var call = Function.prototype.call;
             if (supportsAccessors) {
-                defineGetter = call.bind(prototypeOfObject.__defineGetter__);
-                defineSetter = call.bind(prototypeOfObject.__defineSetter__);
-                lookupGetter = call.bind(prototypeOfObject.__lookupGetter__);
-                lookupSetter = call.bind(prototypeOfObject.__lookupSetter__);
+                defineGetter = call.bind(prototypeFallback.__defineGetter__);
+                defineSetter = call.bind(prototypeFallback.__defineSetter__);
+                lookupGetter = call.bind(prototypeFallback.__lookupGetter__);
+                lookupSetter = call.bind(prototypeFallback.__lookupSetter__);
             }
 
             return function(object, property, desc) {
