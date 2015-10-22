@@ -119,7 +119,7 @@
         var defineSetter;
         var lookupGetter;
         var lookupSetter;
-        var supportsAccessors = !!Object.prototype.hasOwnProperty;
+        var supportsAccessors = Object.prototype.hasOwnProperty('__defineGetter__');
         var call = Function.prototype.call;
         if (supportsAccessors) {
             defineGetter = call.bind(prototypeFallback.__defineGetter__);

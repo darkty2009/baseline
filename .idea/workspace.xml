@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/object/base.js" afterPath="$PROJECT_DIR$/src/object/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/patch.js" afterPath="$PROJECT_DIR$/src/patch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baseline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +28,16 @@
       <file leaf-file-name="base.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/object/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="52" selection-start="5914" selection-end="5914" vertical-scroll-proportion="0.40265486" vertical-offset="2278" max-vertical-offset="3525">
+            <state line="121" column="84" selection-start="4153" selection-end="4153" vertical-scroll-proportion="0.29867256" vertical-offset="1680" max-vertical-offset="3525">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/function/base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="101" selection-start="164" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -57,8 +64,18 @@
       <file leaf-file-name="baseline.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/baseline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="974" column="8" selection-start="33050" selection-end="33050" vertical-scroll-proportion="-6.1538463" vertical-offset="14450" max-vertical-offset="21300">
-              <folding />
+            <state line="972" column="8" selection-start="32827" selection-end="32827" vertical-scroll-proportion="-6.1538463" vertical-offset="14420" max-vertical-offset="21270">
+              <folding>
+                <marker date="1445500227000" expanded="true" signature="27753:32162" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="29231:32121" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="31894:32013" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="32251:32541" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="32315:32461" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="32378:32384" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="32621:32699" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="32704:32794" placeholder="{...}" />
+                <marker date="1445500227000" expanded="true" signature="32790:32797" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -563,7 +580,17 @@
     <entry file="file://$PROJECT_DIR$/build/baseline.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="14" selection-start="0" selection-end="44513" vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="20445">
-          <folding />
+          <folding>
+            <marker date="1445500227000" expanded="true" signature="27753:32162" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="29231:32121" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="31894:32013" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32251:32541" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32315:32461" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32378:32384" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32621:32699" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32704:32794" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32790:32797" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -636,11 +663,6 @@
     <entry file="file://$PROJECT_DIR$/src/array/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4905" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/function/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/json/base.js">
@@ -817,8 +839,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/baseline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="974" column="8" selection-start="33050" selection-end="33050" vertical-scroll-proportion="-6.1538463" vertical-offset="14450" max-vertical-offset="21300">
-          <folding />
+        <state line="972" column="8" selection-start="32827" selection-end="32827" vertical-scroll-proportion="-6.1538463" vertical-offset="14420" max-vertical-offset="21270">
+          <folding>
+            <marker date="1445500227000" expanded="true" signature="27753:32162" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="29231:32121" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="31894:32013" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32251:32541" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32315:32461" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32378:32384" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32621:32699" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32704:32794" placeholder="{...}" />
+            <marker date="1445500227000" expanded="true" signature="32790:32797" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -836,9 +868,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/function/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="101" selection-start="164" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/object/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="52" selection-start="5914" selection-end="5914" vertical-scroll-proportion="0.40265486" vertical-offset="2278" max-vertical-offset="3525">
+        <state line="121" column="84" selection-start="4153" selection-end="4153" vertical-scroll-proportion="0.29867256" vertical-offset="1680" max-vertical-offset="3525">
           <folding />
         </state>
       </provider>
