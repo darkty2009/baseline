@@ -926,6 +926,7 @@
             var lookupGetter;
             var lookupSetter;
             var supportsAccessors = !!Object.prototype.hasOwnProperty;
+            var call = Function.prototype.call;
             if (supportsAccessors) {
                 defineGetter = call.bind(prototypeOfObject.__defineGetter__);
                 defineSetter = call.bind(prototypeOfObject.__defineSetter__);

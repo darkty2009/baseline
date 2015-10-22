@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/object/base.js" afterPath="$PROJECT_DIR$/src/object/base.js" />
     </list>
     <ignored path="baseline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +28,16 @@
       <file leaf-file-name="base.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/object/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="30" selection-start="5975" selection-end="5975" vertical-scroll-proportion="0.8701299" vertical-offset="1983" max-vertical-offset="3495">
+            <state line="120" column="47" selection-start="4212" selection-end="4212" vertical-scroll-proportion="0.64935064" vertical-offset="1500" max-vertical-offset="3510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="34" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="515" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -37,7 +46,7 @@
       <file leaf-file-name="baseline.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/baseline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="9" selection-start="0" selection-end="44506" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="20445">
+            <state line="117" column="9" selection-start="0" selection-end="46903" vertical-scroll-proportion="0.0" vertical-offset="1755" max-vertical-offset="21240">
               <folding />
             </state>
           </provider>
@@ -493,10 +502,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="22" width="1314" height="746" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -738,11 +747,6 @@
         <state line="4" column="0" selection-start="43" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="2076" max-vertical-offset="2460" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.071428575" vertical-offset="570" max-vertical-offset="990" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -763,7 +767,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/baseline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="9" selection-start="0" selection-end="44506" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="20445">
+        <state line="117" column="9" selection-start="0" selection-end="46903" vertical-scroll-proportion="0.0" vertical-offset="1755" max-vertical-offset="21240">
           <folding />
         </state>
       </provider>
@@ -789,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/promise/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="66" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2235">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.06666667" vertical-offset="0" max-vertical-offset="450">
@@ -810,9 +807,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="34" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="515" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/promise/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="66" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2235">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/object/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="30" selection-start="5975" selection-end="5975" vertical-scroll-proportion="0.8701299" vertical-offset="1983" max-vertical-offset="3495">
+        <state line="120" column="47" selection-start="4212" selection-end="4212" vertical-scroll-proportion="0.64935064" vertical-offset="1500" max-vertical-offset="3510">
           <folding />
         </state>
       </provider>
