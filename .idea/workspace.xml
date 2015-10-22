@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/object/base.js" afterPath="$PROJECT_DIR$/src/object/base.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/baseline.js" afterPath="$PROJECT_DIR$/build/baseline.js" />
     </list>
     <ignored path="baseline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/object/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="47" selection-start="4212" selection-end="4212" vertical-scroll-proportion="0.64935064" vertical-offset="1500" max-vertical-offset="3510">
+            <state line="114" column="0" selection-start="3973" selection-end="3973" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="3510">
               <folding />
             </state>
           </provider>
@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseline.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="baseline.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/baseline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="9" selection-start="0" selection-end="46951" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="21255">
+            <state line="933" column="58" selection-start="31499" selection-end="31499" vertical-scroll-proportion="0.6766055" vertical-offset="13700" max-vertical-offset="21255">
               <folding />
             </state>
           </provider>
@@ -111,7 +111,6 @@
         <option value="$PROJECT_DIR$/unit/test/tests.js" />
         <option value="$PROJECT_DIR$/package.json.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
-        <option value="$PROJECT_DIR$/build/baseline.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/src/array/base.js" />
         <option value="$PROJECT_DIR$/src/date/base.js" />
@@ -150,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/promise/base.js" />
         <option value="$PROJECT_DIR$/test/temp.html" />
         <option value="$PROJECT_DIR$/src/object/base.js" />
+        <option value="$PROJECT_DIR$/build/baseline.js" />
       </list>
     </option>
   </component>
@@ -502,10 +502,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="22" width="1314" height="746" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -765,13 +765,6 @@
         <state line="41" column="58" selection-start="1362" selection-end="1362" vertical-scroll-proportion="1.4642857" vertical-offset="0" max-vertical-offset="855" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/baseline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="9" selection-start="0" selection-end="46951" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="21255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/function/plus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
@@ -823,7 +816,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/object/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="47" selection-start="4212" selection-end="4212" vertical-scroll-proportion="0.64935064" vertical-offset="1500" max-vertical-offset="3510">
+        <state line="114" column="0" selection-start="3973" selection-end="3973" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="3510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/baseline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="933" column="58" selection-start="31499" selection-end="31499" vertical-scroll-proportion="0.6766055" vertical-offset="13700" max-vertical-offset="21255">
           <folding />
         </state>
       </provider>
