@@ -890,7 +890,7 @@
                 }
 
                 if(properties !== void 0) {
-                    patches(properties, object);
+                    patch.some(properties, object);
                 }
                 return object;
             }
