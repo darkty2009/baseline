@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/object/base.js" afterPath="$PROJECT_DIR$/src/object/base.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baseline.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,129 +18,107 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="baseline" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/object/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="645" selection-end="645" vertical-scroll-proportion="-1.2348669" vertical-offset="930" max-vertical-offset="9810">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.03311258">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/function/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="27" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="patch.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="patch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/patch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="34" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="515" max-vertical-offset="990">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseline.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="baseline.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/baseline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1529" column="8" selection-start="55453" selection-end="55453" vertical-scroll-proportion="-6.1538463" vertical-offset="22775" max-vertical-offset="29625">
-              <folding>
-                <marker date="1445821715000" expanded="true" signature="268:69631" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="48603:48622" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="48684:48770" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="48819:48910" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="48948:48980" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49077:49128" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49204:49235" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49261:49643" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49272:49330" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49377:49507" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49725:54754" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49842:50024" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="49824:49944" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="50029:51505" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="50160:51434" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="51250:51285" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="51639:54752" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="51988:52084" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="54675:54718" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="54793:55168" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="54835:55017" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="54930:54936" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="55195:55409" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="55246:55252" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="55257:55362" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="55358:55365" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="55558:56724" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="55663:55894" placeholder="[...]" />
-                <marker date="1445821715000" expanded="true" signature="56088:56683" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="56259:56406" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="56318:56365" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="56526:56605" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="56846:56955" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="57110:57604" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="57174:57526" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="57263:57336" placeholder="{...}" />
-                <marker date="1445821715000" expanded="true" signature="57365:57480" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1390" column="8" selection-start-line="1390" selection-start-column="8" selection-end-line="1390" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="plus.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/function/plus.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/promise/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="66" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2235">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plus.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="plus.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/string/plus.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="54" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1680">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temp.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="temp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="11" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -155,63 +135,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/unit/test/Array.js" />
-        <option value="$PROJECT_DIR$/unit/animation.html" />
-        <option value="$PROJECT_DIR$/animation.js" />
-        <option value="$PROJECT_DIR$/unit/baseline.html" />
-        <option value="$PROJECT_DIR$/unit/plus.html" />
-        <option value="$PROJECT_DIR$/unit/test/plus.js" />
-        <option value="$PROJECT_DIR$/unit/test/Object.js" />
-        <option value="$PROJECT_DIR$/unit/test/tests.js" />
-        <option value="$PROJECT_DIR$/package.json.js" />
-        <option value="$PROJECT_DIR$/test/test.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/src/array/base.js" />
-        <option value="$PROJECT_DIR$/src/date/base.js" />
-        <option value="$PROJECT_DIR$/src/function/base.js" />
-        <option value="$PROJECT_DIR$/src/iterator/base.js" />
-        <option value="$PROJECT_DIR$/src/json/base.js" />
-        <option value="$PROJECT_DIR$/src/map/base.js" />
-        <option value="$PROJECT_DIR$/src/string/base.js" />
-        <option value="$PROJECT_DIR$/src/number/base.js" />
-        <option value="$PROJECT_DIR$/src/math/base.js" />
-        <option value="$PROJECT_DIR$/src/array/plus.js" />
-        <option value="$PROJECT_DIR$/src/function/plus.js" />
-        <option value="$PROJECT_DIR$/src/object/plus.js" />
-        <option value="$PROJECT_DIR$/src/string/plus.js" />
-        <option value="$PROJECT_DIR$/test/tests.js" />
-        <option value="$PROJECT_DIR$/test/Array.js" />
-        <option value="$PROJECT_DIR$/test/Date.js" />
-        <option value="$PROJECT_DIR$/test/Function.js" />
-        <option value="$PROJECT_DIR$/test/JSON.js" />
-        <option value="$PROJECT_DIR$/test/Map.js" />
-        <option value="$PROJECT_DIR$/test/Math.js" />
-        <option value="$PROJECT_DIR$/test/Number.js" />
-        <option value="$PROJECT_DIR$/test/Object.js" />
-        <option value="$PROJECT_DIR$/test/String.js" />
-        <option value="$PROJECT_DIR$/test/Promise.js" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/npm-debug.log" />
-        <option value="$PROJECT_DIR$/baseline.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.npmignore" />
-        <option value="$PROJECT_DIR$/src/date/plus.js" />
-        <option value="$PROJECT_DIR$/src/number/plus.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/promise/base.js" />
-        <option value="$PROJECT_DIR$/test/temp.html" />
-        <option value="$PROJECT_DIR$/build/baseline.js" />
-        <option value="$PROJECT_DIR$/src/patch.js" />
-        <option value="$PROJECT_DIR$/src/object/base.js" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true">
+    <gruntfile path="$PROJECT_DIR$/Gruntfile.js" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="174" />
+    <option name="x" value="52" />
     <option name="y" value="22" />
     <option name="width" value="1314" />
     <option name="height" value="746" />
@@ -230,7 +171,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -242,7 +183,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,238 +211,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="promise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="number" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iterator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="function" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="date" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="array" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,6 +234,7 @@
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesJSON" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -532,53 +249,45 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
-    <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="00b13c76-fc81-4170-b149-d2e8a3e2d070" name="Default" comment="" />
       <created>1402896346363</created>
+      <option name="number" value="Default" />
       <updated>1402896346363</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="174" y="22" width="1314" height="746" extended-state="6" />
+    <frame x="52" y="22" width="1314" height="746" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23088685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23018293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34198114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3474843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -589,383 +298,380 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/object/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="36" selection-start="5169" selection-end="5169" vertical-scroll-proportion="0.0" vertical-offset="2205" max-vertical-offset="2700">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/baseline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="14" selection-start="0" selection-end="44513" vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="20445">
-          <folding>
-            <marker date="1445821715000" expanded="true" signature="268:69631" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48603:48622" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48684:48770" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48819:48910" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48948:48980" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49077:49128" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49204:49235" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49261:49643" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49272:49330" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49377:49507" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49725:54754" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49842:50024" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49824:49944" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="50029:51505" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="50160:51434" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="51250:51285" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="51639:54752" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="51988:52084" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54675:54718" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54793:55168" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54835:55017" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54930:54936" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55195:55409" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55246:55252" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55257:55362" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55358:55365" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55558:56724" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55663:55894" placeholder="[...]" />
-            <marker date="1445821715000" expanded="true" signature="56088:56683" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56259:56406" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56318:56365" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56526:56605" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56846:56955" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57110:57604" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57174:57526" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57263:57336" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57365:57480" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/function/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="10" selection-start="493" selection-end="784" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/array/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="9" selection-start="3128" selection-end="3128" vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="1650">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Math.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Array.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/animation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="5" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/.bin/grunt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/baseline.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="543" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/all.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="19092" max-vertical-offset="25905" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/array/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4905" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/json/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="8" selection-end="51" vertical-scroll-proportion="-0.5769231" vertical-offset="0" max-vertical-offset="1275" />
+        <state vertical-scroll-proportion="-0.5769231">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/map/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1470" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/string/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="10" selection-start="1885" selection-end="1885" vertical-scroll-proportion="-2.3846154" vertical-offset="853" max-vertical-offset="3510" />
+        <state vertical-scroll-proportion="-2.3846154">
+          <caret line="61" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/number/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="510" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iterator/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Array.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="66" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="9255" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/JSON.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Date.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="32" selection-start="3171" selection-end="3171" vertical-scroll-proportion="0.6778043" vertical-offset="976" max-vertical-offset="1395" />
+        <state vertical-scroll-proportion="0.6778043">
+          <caret line="84" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Promise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="23" selection-start="3309" selection-end="3309" vertical-scroll-proportion="3.827392" vertical-offset="0" max-vertical-offset="2190" />
+        <state vertical-scroll-proportion="3.827392">
+          <caret line="136" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="187" selection-end="187" vertical-scroll-proportion="0.30226701" vertical-offset="0" max-vertical-offset="2355" />
+        <state vertical-scroll-proportion="0.30226701">
+          <caret line="8" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Number.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2070" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/String.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2520" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="8" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="7395" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Math.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.npmignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="12" selection-start="73" selection-end="73" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="180" />
+        <state vertical-scroll-proportion="-3.6">
+          <caret line="6" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/date/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="2018" max-vertical-offset="2415" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/number/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="65" selection-start="4653" selection-end="4653" vertical-scroll-proportion="0.0" vertical-offset="2453" max-vertical-offset="2880" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="168" column="65" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/object/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="43" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="2076" max-vertical-offset="2460" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="276" column="22" selection-start="4499" selection-end="4499" vertical-scroll-proportion="0.38931298" vertical-offset="3987" max-vertical-offset="4380" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="4" selection-start="443" selection-end="443" vertical-scroll-proportion="0.8333333" vertical-offset="0" max-vertical-offset="645" />
+        <state vertical-scroll-proportion="0.38931298">
+          <caret line="276" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/function/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/string/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="54" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1680">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/temp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="11" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="660">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.06666667" vertical-offset="0" max-vertical-offset="450">
-          <folding />
+        <state vertical-scroll-proportion="0.06666667">
+          <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/array/plus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="9" selection-start="3128" selection-end="3128" vertical-scroll-proportion="3.2842104" vertical-offset="0" max-vertical-offset="1650">
-          <folding />
+        <state vertical-scroll-proportion="3.2842104">
+          <caret line="104" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="515" max-vertical-offset="990">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/promise/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="66" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2235">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/baseline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1529" column="8" selection-start="55453" selection-end="55453" vertical-scroll-proportion="-6.1538463" vertical-offset="22775" max-vertical-offset="29625">
-          <folding>
-            <marker date="1445821715000" expanded="true" signature="268:69631" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48603:48622" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48684:48770" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48819:48910" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="48948:48980" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49077:49128" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49204:49235" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49261:49643" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49272:49330" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49377:49507" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49725:54754" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49842:50024" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="49824:49944" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="50029:51505" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="50160:51434" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="51250:51285" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="51639:54752" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="51988:52084" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54675:54718" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54793:55168" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54835:55017" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="54930:54936" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55195:55409" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55246:55252" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55257:55362" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55358:55365" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55558:56724" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="55663:55894" placeholder="[...]" />
-            <marker date="1445821715000" expanded="true" signature="56088:56683" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56259:56406" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56318:56365" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56526:56605" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="56846:56955" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57110:57604" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57174:57526" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57263:57336" placeholder="{...}" />
-            <marker date="1445821715000" expanded="true" signature="57365:57480" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1390" column="8" selection-start-line="1390" selection-start-column="8" selection-end-line="1390" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/date/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="8" selection-end="51" vertical-scroll-proportion="0.06833713" vertical-offset="0" max-vertical-offset="990">
-          <folding />
+        <state vertical-scroll-proportion="0.06833713">
+          <caret line="2" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/patch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="855">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/function/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="27" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/object/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="645" selection-end="645" vertical-scroll-proportion="-1.2348669" vertical-offset="930" max-vertical-offset="9810">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03311258">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
