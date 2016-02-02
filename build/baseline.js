@@ -71,7 +71,54 @@
         },
         isArray:function(arg) {
             return Object.prototype.toString.call(arg) === '[object Array]';
-        }
+        },
+        from:(function () {
+            var toStr = Object.prototype.toString;
+            var isCallable = function (fn) {
+                return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+            };
+            var maxSafeInteger = Math.pow(2, 53) - 1;
+            var toLength = function (value) {
+                var len = Number.toInteger(value);
+                return Math.min(Math.max(len, 0), maxSafeInteger);
+            };
+
+            return function from(arrayLike/*, mapFn, thisArg */) {
+                var C = this;
+
+                var items = Object(arrayLike);
+
+                if (arrayLike == null) {
+                    throw new TypeError("Array.from requires an array-like object - not null or undefined");
+                }
+
+                var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+                var T;
+                if (typeof mapFn !== 'undefined') {
+                    if (!isCallable(mapFn)) {
+                        throw new TypeError('Array.from: when provided, the second argument must be a function');
+                    }
+                    if (arguments.length > 2) {
+                        T = arguments[2];
+                    }
+                }
+                var len = toLength(items.length);
+                var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+                var k = 0;
+                var kValue;
+                while (k < len) {
+                    kValue = items[k];
+                    if (mapFn) {
+                        A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+                    } else {
+                        A[k] = kValue;
+                    }
+                    k += 1;
+                }
+                A.length = len;
+                return A;
+            };
+        }())
     }, Array);
 
     patch.some({
@@ -93,7 +140,7 @@
             }
             return true;
         },
-        fill:function(value) {
+        fill:function(value/*,startIndex, endIndex*/) {
             var O = Object(this);
             var len = parseInt(O.length);
             var start = arguments[1];
@@ -489,15 +536,16 @@
             this.length = this.iterator.length;
 
             this.next = function() {
-                var value = this.iterator[this.current];
                 if(this.current >= this.length) {
                     throw new Error("stop iterate");
                 }
-                return [this.current++, value];
-                // return {
-                // value:value,
-                // done:this.current >= this.length
-                // };
+                //return [this.current++, value];
+                return this.current < this.length ? {
+                    value:this.source[this.current++],
+                    done:false
+                } : {
+                    done:true
+                };
             };
         };
 
@@ -772,6 +820,7 @@
             return  (Math.exp(x) - Math.exp(-x)) / (Math.exp(x) + Math.exp(-x));
         },
         trunc:function(x) {
+            x = Number(x);
             return x < 0 ? Math.ceil(x) : Math.floor(x);
         }
 
@@ -784,11 +833,14 @@
         EPSILON:2.220446049250313e-16,
         MAX_VALUE:1.7976931348623157e+308,
         MIN_VALUE:5e-324,
-        MAX_SAFE_VALUE:9007199254740992,
-        MIN_SAFE_VALUE:-9007199254740992,
+        MAX_SAFE_VALUE:9007199254740991,
+        MIN_SAFE_VALUE:-9007199254740991,
         NEGATIVE_INFINITY:-Infinity,
         POSITIVE_INFINITY:Infinity,
         "NaN":NaN,
+        isSafeInteger:function(val) {
+            return Number.isInteger(val) && val >= Number.MIN_SAFE_VALUE && val <= Number.MAX_SAFE_VALUE;
+        },
         isFinite:function(val) {
             if(typeof val == 'number') {
                 return win.isFinite(val);
@@ -796,7 +848,7 @@
             return false;
         },
         isInteger:function isInteger (val) {
-            return typeof val === "number" && isFinite(val) && val > Number.MIN_SAFE_VALUE && val < Number.MAX_SAFE_VALUE && Math.floor(val) === val;
+            return typeof val === "number" && isFinite(val) && Math.floor(val) === val;
         },
         isNaN:isNaN,
         parseFloat:parseFloat,
@@ -831,6 +883,25 @@
                 return v2 !== v2;
             }
             return v1 === v2;
+        },
+        assign:function(target) {
+            'use strict';
+            if (target === undefined || target === null) {
+                throw new TypeError('Cannot convert undefined or null to object');
+            }
+
+            var output = Object(target);
+            for (var index = 1; index < arguments.length; index++) {
+                var source = arguments[index];
+                if (source !== undefined && source !== null) {
+                    for (var nextKey in source) {
+                        if (source.hasOwnProperty(nextKey)) {
+                            output[nextKey] = source[nextKey];
+                        }
+                    }
+                }
+            }
+            return output;
         }
     }, Object);
 
@@ -872,6 +943,12 @@
             return result;
         };
     })(), Object, 'keys');
+
+    patch.one(function() {
+        return Object.keys(this).map(function(key) {
+            return this[key];
+        }.bind(this));
+    }, Object, 'values');
 
     patch.one((function() {
         var _Proxy;
@@ -1602,6 +1679,15 @@
 (function(win) {
     var patch = win.patch;
 
+    patch.some({
+        escape:function(str) {
+            return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\__include__");
+        }
+    }, RegExp);
+})(this);
+(function(win) {
+    var patch = win.patch;
+
     patch.one((function() {
         var _Set = function() {
             this.__source__ = [];
@@ -1687,6 +1773,19 @@
                 }
             }
             return first;
+        },
+        at:function(position) {
+            var codePoint = this.codePointAt(position);
+            if(codePoint > 0xffff) {
+                return String.fromCodePoint(codePoint);
+            }else {
+                var self = this;
+                return self[position];
+            }
+        },
+        normalize:function(type) {
+            // can't polyfill
+            return this;
         },
         contains:function() {
             return String.prototype.indexOf.apply(this, arguments) !== -1;
@@ -1774,6 +1873,19 @@
             }
             return true;
         },
+        includes:function() {
+            'use strict';
+            if (typeof arguments[1] === "number") {
+                if (this.length < arguments[0].length + arguments[1].length) {
+                    return false;
+                } else {
+                    if (this.substr(arguments[1], arguments[0].length) === arguments[0]) return true;
+                    else return false;
+                }
+            } else {
+                return String.prototype.indexOf.apply(this, arguments) !== -1;
+            }
+        },
         trim:function() {
             return this.trimLeft().trimRight();
         },
@@ -1782,6 +1894,32 @@
         },
         trimRight:function() {
             return this.replace(/\s+$/g, '');
+        },
+        pad:function(len, fix, type) {
+            fix = fix || ' ';
+            type = type || 'left';
+            var result = this.toString();
+            if(this.length > len) {
+                return result;
+            }
+            len = len - this.length;
+            var left = new Array((type == 'left' ? len : (type == 'right' ? 0 : Math.ceil(len / 2))) + 1).join(fix);
+            var right = new Array((type == 'left' ? 0 : (type == 'right' ? len : Math.floor(len/ 2))) + 1).join(fix);
+            return left + result + right;
+        },
+        padStart:function(len, fix) {
+            return this.pad(len, fix, 'left');
+        },
+        padEnd:function(len, fix) {
+            return this.pad(len, fix, 'right');
+        },
+        search:function(re) {
+            if(re instanceof RegExp) {
+                var newRe = new RegExp(re.source, (re.ignoreCase?'i':'')+(re.multiline?'m':'')+"g");
+                newRe.exec(this);
+                return newRe.lastIndex > 0 ? newRe.lastIndex : -1;
+            }
+            return this.indexOf(re);
         }
     }, String.prototype);
 

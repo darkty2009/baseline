@@ -1,6 +1,6 @@
 #baseline-js
 ----------------
-为包括IE6的浏览器里提供统一的JS API，让所有浏览器里运行的JS拥有一致的输入输出
+为包括IE6的浏览器里提供统一的JS API(ES6+)，让所有浏览器里运行的JS拥有一致的输入输出
 
 ##构建状态
 [build-image]: https://api.travis-ci.org/darkty2009/baseline.svg

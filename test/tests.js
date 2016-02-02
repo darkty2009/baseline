@@ -176,9 +176,10 @@ describe("Iterator (todo: check the implement is right to nodejs ?)", function()
             assert.equal(true, (typeof (Iterator({}).next) !== 'undefined'));
 
             var ite = Iterator(["q", "w", {}]);
-            assert.deepEqual(ite.next(), [0, ["0", 'q']]);
-            assert.deepEqual(ite.next(), [1, ["1", 'w']]);
-            assert.deepEqual(ite.next(), [2, ["2", {}]]);
+            assert.deepEqual(ite.next(), {value:'q', done:false});
+            assert.deepEqual(ite.next(), {value:'w', done:false});
+            assert.deepEqual(ite.next(), {value:{}, done:false});
+            assert.deepEqual(ite.next(), {done:true});
         });
     });
 });
