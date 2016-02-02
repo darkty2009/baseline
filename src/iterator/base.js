@@ -17,15 +17,16 @@
             this.length = this.iterator.length;
 
             this.next = function() {
-                var value = this.iterator[this.current];
                 if(this.current >= this.length) {
                     throw new Error("stop iterate");
                 }
-                return [this.current++, value];
-                // return {
-                // value:value,
-                // done:this.current >= this.length
-                // };
+                //return [this.current++, value];
+                return this.current < this.length ? {
+                    value:this.source[this.current++],
+                    done:false
+                } : {
+                    done:true
+                };
             };
         };
 
