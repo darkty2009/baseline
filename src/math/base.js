@@ -93,6 +93,7 @@
             return  (Math.exp(x) - Math.exp(-x)) / (Math.exp(x) + Math.exp(-x));
         },
         trunc:function(x) {
+            x = Number(x);
             return x < 0 ? Math.ceil(x) : Math.floor(x);
         }
 
