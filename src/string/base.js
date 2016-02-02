@@ -96,6 +96,10 @@
                 return self[position];
             }
         },
+        normalize:function(type) {
+            // can't polyfill
+            return this;
+        },
         contains:function() {
             return String.prototype.indexOf.apply(this, arguments) !== -1;
         },
