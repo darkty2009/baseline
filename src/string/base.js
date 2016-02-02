@@ -87,6 +87,15 @@
             }
             return first;
         },
+        at:function(position) {
+            var codePoint = this.codePointAt(position);
+            if(codePoint > 0xffff) {
+                return String.fromCodePoint(codePoint);
+            }else {
+                var self = this;
+                return self[position];
+            }
+        },
         contains:function() {
             return String.prototype.indexOf.apply(this, arguments) !== -1;
         },
