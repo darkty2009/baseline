@@ -536,7 +536,7 @@
             this.length = this.iterator.length;
 
             this.next = function() {
-                if(this.current >= this.length) {
+                if(this.current > this.length) {
                     throw new Error("stop iterate");
                 }
                 //return [this.current++, value];
