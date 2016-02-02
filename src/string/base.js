@@ -226,6 +226,14 @@
         padEnd:function(len, fix) {
             return this.pad(len, fix, 'right');
         },
+        search:function(re) {
+            if(re instanceof RegExp) {
+                var newRe = new RegExp(re.source, (re.ignoreCase?'i':'')+(re.multiline?'m':'')+"g");
+                newRe.exec(this);
+                return newRe.lastIndex > 0 ? newRe.lastIndex : -1;
+            }
+            return this.indexOf(re);
+        }
     }, String.prototype);
 
     patch.some({
