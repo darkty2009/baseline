@@ -76,7 +76,7 @@
             }
             return true;
         },
-        fill:function(value) {
+        fill:function(value/*,startIndex*/) {
             var O = Object(this);
             var len = parseInt(O.length);
             var start = arguments[1];
