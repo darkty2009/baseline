@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/string/base.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.8">
-              <caret line="100" column="24" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="24" />
+              <caret line="199" column="13" selection-start-line="199" selection-start-column="13" selection-end-line="199" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -796,7 +796,7 @@
     <entry file="file://$PROJECT_DIR$/src/string/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8">
-          <caret line="100" column="24" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="24" />
+          <caret line="199" column="13" selection-start-line="199" selection-start-column="13" selection-end-line="199" selection-end-column="13" />
           <folding />
         </state>
       </provider>
