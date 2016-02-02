@@ -84,6 +84,12 @@
         };
     })(), Object, 'keys');
 
+    patch.one(function() {
+        return Object.keys(this).map(function(key) {
+            return this[key];
+        }.bind(this));
+    }, Object, 'values');
+
     patch.one((function() {
         var _Proxy;
         _Proxy = function () {
