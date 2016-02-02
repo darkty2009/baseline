@@ -47,24 +47,6 @@
 
             return (template+suffix).length > str.length ? str : str.slice(0, template.length)+suffix;
         },
-        pad:function(len, fix, type) {
-            fix = fix || ' ';
-            type = type || 'left';
-            var result = this.toString();
-            if(this.length > len) {
-                return result;
-            }
-            len = len - this.length;
-            var left = new Array((type == 'left' ? len : (type == 'right' ? 0 : Math.ceil(len / 2))) + 1).join(fix);
-            var right = new Array((type == 'left' ? 0 : (type == 'right' ? len : Math.floor(len/ 2))) + 1).join(fix);
-            return left + result + right;
-        },
-        lpad:function(len, fix) {
-            return this.pad(len, fix, 'left');
-        },
-        rpad:function(len, fix) {
-            return this.pad(len, fix, 'right');
-        },
         lrpad:function(len, fix) {
             return this.pad(len, fix, 'center');
         },

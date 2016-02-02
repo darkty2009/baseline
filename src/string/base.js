@@ -207,7 +207,25 @@
         },
         trimRight:function() {
             return this.replace(/\s+$/g, '');
-        }
+        },
+        pad:function(len, fix, type) {
+            fix = fix || ' ';
+            type = type || 'left';
+            var result = this.toString();
+            if(this.length > len) {
+                return result;
+            }
+            len = len - this.length;
+            var left = new Array((type == 'left' ? len : (type == 'right' ? 0 : Math.ceil(len / 2))) + 1).join(fix);
+            var right = new Array((type == 'left' ? 0 : (type == 'right' ? len : Math.floor(len/ 2))) + 1).join(fix);
+            return left + result + right;
+        },
+        padStart:function(len, fix) {
+            return this.pad(len, fix, 'left');
+        },
+        padEnd:function(len, fix) {
+            return this.pad(len, fix, 'right');
+        },
     }, String.prototype);
 
     patch.some({
